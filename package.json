@@ -4,7 +4,8 @@
   "description": "Premium landing page for Rack n Roast - Gaming Lounge & Kitchen",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'Static build - no compilation needed'"
   },
   "author": "Rack n Roast",
   "license": "ISC"

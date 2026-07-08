@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rack n Roast - Bhagalpur's premier rooftop cafe, restaurant, and gaming zone. Enjoy premium pool, snooker, and PS5/VR games alongside delicious food.">
+  <meta name="keywords" content="Rack n Roast, rooftop cafe Bhagalpur, gaming lounge Bhagalpur, pool table, snooker table, gaming cafe, restaurant Adampur">
+  <meta name="author" content="Rack n Roast">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:3000/">
+  <meta property="og:title" content="Rack n Roast | Play. Eat. Relax.">
+  <meta property="og:description" content="Bhagalpur's ultimate rooftop kitchen and gaming lounge. Premium games, mouthwatering menu, and cozy vibes.">
+  <meta property="og:image" content="./assets/images/hero_rooftop.jpg">
+
+  <title>Rack n Roast | Play. Eat. Relax.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <header id="main-header" class="header-glass">
+    <div class="header-container">
+      <a href="#home" class="logo-area">
+        <img src="./assets/images/logo.png" alt="Rack n Roast Logo" class="nav-logo">
+        <span class="brand-name">RACK<span class="highlight">N</span>ROAST</span>
+      </a>
+
+      <!-- Desktop Nav Link Menu -->
+      <nav id="navbar" class="nav-menu">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gaming">Play Zone</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#combos">Combos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA and Hamburger -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-nav">Book Table</a>
+        <button id="menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div id="mobile-nav" class="mobile-nav-overlay">
+    <div class="mobile-nav-content">
+      <ul>
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">Our Story</a></li>
+        <li><a href="#gaming" class="mobile-link">Play Zone</a></li>
+        <li><a href="#menu" class="mobile-link">Menu</a></li>
+        <li><a href="#combos" class="mobile-link">Combos</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-mobile-nav mobile-link">Book Table</a>
+    </div>
+  </div>
+
+  <!-- Hero Banner Slider -->
+  <section id="home" class="hero-section">
+    <!-- Slider Backgrounds -->
+    <div class="hero-bg-slider">
+      <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url('./assets/images/hero_rooftop.jpg');"></div>
+      <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url('./assets/images/hero_pool.jpg');"></div>
+    </div>
+
+    <!-- Hero Content Overlay -->
+    <div class="hero-content text-reveal">
+      <div class="badge-tag animate-fade">GOOD FOOD • GREAT GAMES • COZY VIBES</div>
+      <h1 class="hero-heading">
+        Upgrade Your Game.<br>
+        <span class="text-gradient">Upgrade Your Food.</span>
+      </h1>
+      <p class="hero-paragraph">
+        Bhagalpur's premier rooftop cafe, restaurant, and gaming zone. Enjoy delicious food on our 5th floor open-air rooftop, or rack up victories in our 4th floor snooker, pool, and PS5 gaming arena.
+      </p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn btn-primary btn-lg">Explore Menu</a>
+        <a href="#gaming" class="btn btn-secondary btn-lg">Gaming Rates</a>
+      </div>
+    </div>
+
+    <!-- Bottom Wave Separator -->
+    <div class="hero-wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,84.43,24.12,143.15,36.54,204,40.76,265.26,38.89Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Features Highlights Section -->
+  <section class="features-bar">
+    <div class="container features-container">
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-text">
+          <h3>Fast Service</h3>
+          <p>Quick, hot orders</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎮</div>
+        <div class="feature-text">
+          <h3>Gaming Zone</h3>
+          <p>Pool, Snooker & VR</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">☕</div>
+        <div class="feature-text">
+          <h3>Cozy Ambience</h3>
+          <p>Rooftop views & lounge</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📶</div>
+        <div class="feature-text">
+          <h3>Free High-Speed Wi-Fi</h3>
+          <p>Always stay connected</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-area reveal-left">
+          <div class="img-wrapper">
+            <img src="./assets/images/hero_rooftop.jpg" alt="Rack n Roast Rooftop Dining" class="about-img">
+            <div class="experience-badge">
+              <span class="number">PLAY</span>
+              <span class="text">EAT. RELAX.</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <span class="section-subtitle">WELCOME TO RACK N ROAST</span>
+          <h2 class="section-title">Bhagalpur's Premier <span class="highlight">Cafe, Restaurant & Gaming Hub</span></h2>
+          <p class="about-desc">
+            Rack n Roast is Bhagalpur's ultimate cafe, restaurant, and gaming zone split across two spacious floors. The **4th Floor** houses our top-tier Gaming Zone featuring professional Snooker tables, imported Pool tables, and a dedicated high-performance PlayStation 5 & VR2 lounge.
+          </p>
+          <p class="about-desc">
+            The **5th Floor** features our gorgeous open-air rooftop cafe and restaurant. The word **"Rack"** represents our passion for cue games: the meticulous racking of pool and snooker balls on the 4th floor. The word **"Roast"** pays tribute to our delicious cafe items, fresh sizzlers, wood-fired pizzas, and roasted coffees served on the 5th floor.
+          </p>
+          <p class="about-desc">
+            Whether you want to challenge your squad to a pool match, dive into virtual gaming, or relish delicious food with a stunning view on our rooftop terrace, Rack n Roast is the place to be.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>12+</h4>
+              <p>Gaming Stations</p>
+            </div>
+            <div class="stat-card">
+              <h4>50+</h4>
+              <p>Menu Dishes</p>
+            </div>
+            <div class="stat-card">
+              <h4>2</h4>
+              <p>Spacious Floors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Play Zone / Gaming Arena Section -->
+  <section id="gaming" class="gaming-section section-padding bg-darker">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="section-subtitle">THE PLAY ZONE</span>
+        <h2 class="section-title">Upgrade Your <span class="highlight">Gaming Experience</span></h2>
+        <p class="section-desc">Experience top-tier competitive gaming gear in Bhagalpur. Standard pricing per hour is listed below.</p>
+      </div>
+
+      <!-- Gaming Grid -->
+      <div class="gaming-grid">
+        <!-- Pool Card -->
+        <div class="gaming-card reveal-up">
+          <div class="gaming-img-holder">
+            <img src="./assets/images/hero_pool.jpg" alt="Pool Table Arena" class="gaming-card-img">
+            <div class="price-overlay">₹200 / HR</div>
+          </div>
+          <div class="gaming-card-body">
+            <h3>🎱 8-Ball Pool Arena</h3>
+            <p>Premium pool tables featuring imported slate beds, high-speed felt, and ergonomic cue racks. Perfect for casual games or target practice.</p>
+            <ul class="gaming-features">
+              <li><i class="fa-solid fa-check"></i> Standard 8-ball tables</li>
+              <li><i class="fa-solid fa-check"></i> Premium cues and chalk</li>
+              <li><i class="fa-solid fa-check"></i> Cozy lounge seating</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PS/VR Card -->
+        <div class="gaming-card reveal-up" style="animation-delay: 0.2s;">
+          <div class="gaming-img-holder">
+            <img src="./assets/images/gaming_ps5.jpg" alt="PlayStation 5 & VR2 Arena" class="gaming-card-img">
+            <div class="price-overlay">₹250 / HR</div>
+          </div>
+          <div class="gaming-card-body">
+            <h3>🎮 PlayStation 5 & VR2</h3>
+            <p>Dive into high-performance gaming. Enjoy 4K HDR displays with the latest PS5 blockbusters, or escape reality with immersive PSVR2 headsets.</p>
+            <ul class="gaming-features">
+              <li><i class="fa-solid fa-check"></i> PS5 DualSense controllers</li>
+              <li><i class="fa-solid fa-check"></i> Immersive VR2 Headsets</li>
+              <li><i class="fa-solid fa-check"></i> Large catalog of games</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Snooker Card -->
+        <div class="gaming-card reveal-up" style="animation-delay: 0.4s;">
+          <div class="gaming-img-holder">
+            <img src="./assets/images/gaming_snooker.png" alt="Professional Snooker Arena" class="gaming-card-img">
+            <div class="price-overlay">₹300 / HR</div>
+          </div>
+          <div class="gaming-card-body">
+            <h3>🏆 Professional Snooker</h3>
+            <p>Full-size championship snooker tables. Equipped with fine English wool cloth, heavy brass pockets, and professional tournament balls.</p>
+            <ul class="gaming-features">
+              <li><i class="fa-solid fa-check"></i> Full-sized 12ft Snooker Tables</li>
+              <li><i class="fa-solid fa-check"></i> Pro cues and extension bridges</li>
+              <li><i class="fa-solid fa-check"></i> Shadowless LED light panels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Gaming Calculator (Interactive Feature) -->
+      <div id="gaming-calculator" class="calc-wrapper reveal-up">
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>🧮 Play & Dine Estimator</h3>
+            <p>Plan your day! Estimate your gaming session cost based on your hours.</p>
+          </div>
+          <div class="calc-body">
+            <div class="calc-form">
+              <div class="input-group">
+                <label for="calc-pool">Pool Hours (₹200/hr)</label>
+                <div class="qty-selector">
+                  <button type="button" class="btn-qty minus" data-input="calc-pool">-</button>
+                  <input type="number" id="calc-pool" value="0" min="0" max="12">
+                  <button type="button" class="btn-qty plus" data-input="calc-pool">+</button>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="calc-ps">PS/VR Hours (₹250/hr)</label>
+                <div class="qty-selector">
+                  <button type="button" class="btn-qty minus" data-input="calc-ps">-</button>
+                  <input type="number" id="calc-ps" value="0" min="0" max="12">
+                  <button type="button" class="btn-qty plus" data-input="calc-ps">+</button>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="calc-snooker">Snooker Hours (₹300/hr)</label>
+                <div class="qty-selector">
+                  <button type="button" class="btn-qty minus" data-input="calc-snooker">-</button>
+                  <input type="number" id="calc-snooker" value="0" min="0" max="12">
+                  <button type="button" class="btn-qty plus" data-input="calc-snooker">+</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="calc-summary">
+              <h4>Estimated Gaming Total</h4>
+              <div class="total-price">₹<span id="calc-total-val">0</span></div>
+              <p class="calc-tip"><i class="fa-solid fa-lightbulb highlight"></i> Tip: Booking a package? Check out our <strong>Unlimited Fun Combo</strong> below which includes a 1 Hour game table + full meal!</p>
+              <a href="#contact" class="btn btn-primary btn-block">Reserve Gaming Slot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section id="menu" class="menu-section section-padding">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="section-subtitle">OUR SPECIALTIES</span>
+        <h2 class="section-title">Browse Our <span class="highlight">Cafe & Restaurant Menu</span></h2>
+        <p class="section-desc">Handcrafted food and premium beverages prepared fresh by our expert kitchen staff.</p>
+      </div>
+
+      <!-- Menu Search & Filter Area -->
+      <div class="menu-filters-area">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="menu-search-input" placeholder="Search menu items (e.g., fries, pizza, shake)...">
+          <button id="menu-clear-search" class="clear-search-btn" style="display:none;">❌</button>
+        </div>
+
+        <!-- Horizontal scrollable filter tabs -->
+        <div class="tabs-container">
+          <div class="filter-tabs" id="menu-tabs">
+            <button class="tab-btn active" data-category="all">All Items</button>
+            <button class="tab-btn" data-category="quick_bites">Quick Bites</button>
+            <button class="tab-btn" data-category="burgers_sandwiches">Burgers & Sandwiches</button>
+            <button class="tab-btn" data-category="pizzas">Pizzas</button>
+            <button class="tab-btn" data-category="pasta">Pasta</button>
+            <button class="tab-btn" data-category="wraps_rolls">Wraps & Rolls</button>
+            <button class="tab-btn" data-category="main_snacks">Main Snacks</button>
+            <button class="tab-btn" data-category="desserts">Desserts</button>
+            <button class="tab-btn" data-category="hot_beverages">Hot Beverages</button>
+            <button class="tab-btn" data-category="cold_beverages">Cold Beverages</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+      
+      <!-- No Results Alert -->
+      <div id="menu-no-results" class="no-results" style="display: none;">
+        <i class="fa-regular fa-face-frown no-results-icon"></i>
+        <h3>No matching delicacies found</h3>
+        <p>Try searching for something else or browse categories.</p>
+      </div>
+
+      <!-- Menu Card Download Link -->
+      <div class="text-center menu-download-footer reveal-up">
+        <p>Prefer the classic print menu format?</p>
+        <a href="./assets/images/menu_card.jpg" target="_blank" class="btn btn-secondary">📄 View Full Menu Card Image</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combos Section -->
+  <section id="combos" class="combos-section section-padding bg-darker">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="section-subtitle">SAVINGS ZONE</span>
+        <h2 class="section-title">Special Gaming <span class="highlight">& Food Combos</span></h2>
+        <p class="section-desc">Save big by bundling your gaming sessions with delicious food combos.</p>
+      </div>
+
+      <div class="combos-grid">
+        <!-- Rack Combo -->
+        <div class="combo-card reveal-up">
+          <div class="combo-badge">BEST VALUE</div>
+          <div class="combo-img-holder">
+            <img src="./assets/images/combo_burger.png" alt="Rack Combo" class="combo-card-img">
+          </div>
+          <h3>Rack Combo</h3>
+          <div class="combo-price">₹399</div>
+          <p class="combo-desc">A perfect snack bundle to power through quick games.</p>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-utensils"></i> Crispy French Fries</li>
+            <li><i class="fa-solid fa-utensils"></i> Classic Veg Burger</li>
+            <li><i class="fa-solid fa-utensils"></i> Ice Cold Soft Drink</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-combo">Order Combo</a>
+        </div>
+
+        <!-- Pool Player Combo -->
+        <div class="combo-card reveal-up" style="animation-delay: 0.1s;">
+          <div class="combo-badge">POPULAR</div>
+          <div class="combo-img-holder">
+            <img src="./assets/images/combo_pizza.png" alt="Pool Player Combo" class="combo-card-img">
+          </div>
+          <h3>Pool Player Combo</h3>
+          <div class="combo-price">₹599</div>
+          <p class="combo-desc">Fuel up a pair of players for a competitive match.</p>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-utensils"></i> Handcrafted Personal Pizza</li>
+            <li><i class="fa-solid fa-utensils"></i> Buttered Garlic Bread</li>
+            <li><i class="fa-solid fa-utensils"></i> 2 Ice Cold Soft Drinks</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-combo">Order Combo</a>
+        </div>
+
+        <!-- Snooker Night Combo -->
+        <div class="combo-card reveal-up" style="animation-delay: 0.2s;">
+          <div class="combo-badge">SQUAD FAVORITE</div>
+          <div class="combo-img-holder">
+            <img src="./assets/images/combo_pizza.png" alt="Snooker Night Combo" class="combo-card-img">
+          </div>
+          <h3>Snooker Night Combo</h3>
+          <div class="combo-price">₹999</div>
+          <p class="combo-desc">Perfect feast for a full squad night-out.</p>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-utensils"></i> Large Signature Pizza</li>
+            <li><i class="fa-solid fa-utensils"></i> Spicy Chicken Wings / Snack</li>
+            <li><i class="fa-solid fa-utensils"></i> Crispy Family Fries</li>
+            <li><i class="fa-solid fa-utensils"></i> 4 Ice Cold Soft Drinks</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-combo">Order Combo</a>
+        </div>
+
+        <!-- Unlimited Fun Combo -->
+        <div class="combo-card premium-combo reveal-up" style="animation-delay: 0.3s;">
+          <div class="combo-badge-premium"><i class="fa-solid fa-crown"></i> ULTIMATE PACK</div>
+          <div class="combo-img-holder">
+            <img src="./assets/images/combo_gaming.png" alt="Unlimited Fun Combo" class="combo-card-img">
+          </div>
+          <h3>Unlimited Fun Combo</h3>
+          <div class="combo-price">₹1499</div>
+          <p class="combo-desc">The crown-jewel package. Total immersion in food and play.</p>
+          <ul class="combo-items">
+            <li><i class="fa-solid fa-gamepad"></i> <strong>1 Hour Private Game Table</strong></li>
+            <li><i class="fa-solid fa-circle-info"></i> Choice of Snooker or Pool Arena</li>
+            <li><i class="fa-solid fa-utensils"></i> Comprehensive Food Combo Included</li>
+            <li><i class="fa-solid fa-wifi"></i> VIP Seating & Free Wi-Fi</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-combo-premium">Book VIP Combo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="section-subtitle">VISIT US</span>
+        <h2 class="section-title">Find Your Table & <span class="highlight">Game Arena</span></h2>
+        <p class="section-desc">Get in touch to reserve game tables or VIP dining sections on the rooftop. Walk-ins are welcome.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <h3>Contact Details</h3>
+            <p>Call us directly for reservations or food take-out queries.</p>
+            
+            <div class="info-link-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <p class="info-label">Call For Reservation</p>
+                <p class="info-value"><a href="tel:+919845989785">+91 98459 89785</a></p>
+                <p class="info-value"><a href="tel:+917479456172">+91 74794 56172</a></p>
+              </div>
+            </div>
+
+            <div class="info-link-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <p class="info-label">Address</p>
+                <p class="info-value text-white">
+                  4th & 5th Floor, Above G fresh mall,<br>
+                  7X4P+39C, Adampur, Bhagalpur,<br>
+                  Bihar - 812001
+                </p>
+              </div>
+            </div>
+
+            <div class="info-link-item">
+              <div class="info-icon">🕒</div>
+              <div class="info-text">
+                <p class="info-label">Opening Hours</p>
+                <p class="info-value text-white">Daily: 11:00 AM - 11:00 PM</p>
+              </div>
+            </div>
+
+            <div class="info-link-item">
+              <div class="info-icon">📸</div>
+              <div class="info-text">
+                <p class="info-label">Follow Us On Instagram</p>
+                <p class="info-value"><a href="https://instagram.com/rack_n_roast" target="_blank">@rack_n_roast</a></p>
+              </div>
+            </div>
+
+            <div class="info-link-item">
+              <div class="info-icon">💬</div>
+              <div class="info-text">
+                <p class="info-label">WhatsApp Chat</p>
+                <p class="info-value"><a href="https://wa.me/919845989785" target="_blank">+91 98459 89785</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stylized Form -->
+        <div class="contact-form-area reveal-right">
+          <div class="form-card">
+            <h3>Online Reservation Inquiry</h3>
+            <form id="reservation-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Full Name</label>
+                  <input type="text" id="form-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-phone">Phone Number</label>
+                  <input type="tel" id="form-phone" placeholder="9876543210" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-date">Date</label>
+                  <input type="date" id="form-date" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-time">Time</label>
+                  <input type="time" id="form-time" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-activity">Primary Interest</label>
+                  <select id="form-activity">
+                    <option value="dining">Rooftop Dining Only</option>
+                    <option value="pool">Pool Session (₹200/hr)</option>
+                    <option value="snooker">Snooker Session (₹300/hr)</option>
+                    <option value="psvr">PS5/VR Session (₹250/hr)</option>
+                    <option value="combo">Gaming + Dining Combo</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-guests">Number of Guests</label>
+                  <input type="number" id="form-guests" min="1" max="50" value="2" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Special Instructions / Food Preferences</label>
+                <textarea id="form-message" rows="3" placeholder="Tell us if you want to book a specific table, order food in advance, or have specific requirements..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Book via WhatsApp 💬</button>
+            </form>
+            <div id="form-success-alert" class="success-message" style="display:none;">
+              <i class="fa-solid fa-circle-check"></i> Thank you! Your reservation inquiry has been simulated successfully. We'll show confirmation details in a moment.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Floating Cart -->
+  <div id="floating-cart" class="floating-cart-bar">
+    <div class="cart-details">
+      <span class="cart-icon"><i class="fa-solid fa-utensils"></i></span>
+      <span id="cart-item-count" class="badge">0</span>
+      <span class="cart-label">Items Selected:</span>
+      <span class="cart-price">₹<span id="cart-subtotal-val">0</span></span>
+    </div>
+    <div class="cart-actions">
+      <button id="btn-clear-cart" class="btn btn-outline-light btn-sm">Clear</button>
+      <button class="btn btn-secondary btn-sm" id="btn-cart-whatsapp">Order via WhatsApp 💬</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <img src="./assets/images/logo.png" alt="Rack n Roast Logo" class="footer-logo">
+        <h2>RACK<span class="highlight">N</span>ROAST</h2>
+        <p class="brand-tagline">Play. Eat. Relax.</p>
+        <p class="footer-about-text">
+          Bhagalpur’s ultimate destination connecting friends, families, and gamers through world-class recreation and exquisite cuisine.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com/rack_n_roast" target="_blank" aria-label="Instagram">📸</a>
+          <a href="https://facebook.com/rack_n_roast" target="_blank" aria-label="Facebook">📘</a>
+          <a href="https://wa.me/919845989785" target="_blank" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gaming">Play Zone</a></li>
+          <li><a href="#menu">Digital Menu</a></li>
+          <li><a href="#combos">Combo Offers</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-hours">
+        <h3>Operating Hours</h3>
+        <p>Monday - Sunday: 11:00 AM - 11:00 PM</p>
+        <p class="footer-accent-text"><i class="fa-solid fa-gamepad"></i> Gaming slots can be booked up to 10:00 PM.</p>
+        <p class="footer-accent-text"><i class="fa-solid fa-kitchen-set"></i> Kitchen last order at 10:30 PM.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Rack n Roast. All rights reserved.</p>
+        <p>Premium Design by Antigravity | Hosted Locally</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>

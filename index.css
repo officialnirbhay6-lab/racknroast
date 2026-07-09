@@ -426,17 +426,36 @@ input, select, textarea, button {
   max-width: 850px;
 }
 
-.badge-tag {
-  display: inline-block;
-  background-color: var(--color-brand-green);
-  color: var(--color-primary);
-  font-size: 12px;
+.hero-elite-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(11, 45, 32, 0.75); /* Dark transparent brand green */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
-  padding: 8px 16px;
+  letter-spacing: 2.5px;
+  padding: 8px 18px;
   border-radius: 50px;
   margin-bottom: 24px;
-  border: 1px solid var(--color-brand-green-light);
+  text-transform: uppercase;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary); /* Brand Orange */
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--color-primary);
+  animation: pulse-badge-dot 1.5s infinite;
+}
+
+@keyframes pulse-badge-dot {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.6; }
 }
 
 .hero-heading {
@@ -537,18 +556,35 @@ input, select, textarea, button {
 
 .section-subtitle {
   color: var(--color-primary);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .section-title {
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(28px, 4vw, 40px);
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Elite indicator line for titles */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+/* For left-aligned text settings (e.g. About content section) */
+.about-content .section-title::after {
+  margin: 16px 0 0;
 }
 
 .section-desc {
@@ -675,8 +711,8 @@ input, select, textarea, button {
 
 .gaming-card:hover {
   transform: translateY(-8px);
-  border-color: var(--color-brand-green-light);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-color: rgba(230, 126, 34, 0.25);
+  box-shadow: 0 20px 40px rgba(11, 45, 32, 0.07);
 }
 
 .gaming-img-holder {
@@ -1027,9 +1063,9 @@ input, select, textarea, button {
 }
 
 .menu-card:hover {
-  border-color: var(--color-brand-green-light);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(230, 126, 34, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(11, 45, 32, 0.05);
 }
 
 .menu-card-header {
@@ -1239,8 +1275,8 @@ input, select, textarea, button {
 
 .combo-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  border-color: var(--color-brand-green-light);
+  box-shadow: 0 20px 40px rgba(11, 45, 32, 0.07);
+  border-color: rgba(230, 126, 34, 0.25);
 }
 
 .combo-badge {
@@ -1773,6 +1809,14 @@ input, select, textarea, button {
 @media (max-width: 768px) {
   :root {
     --header-height: 80px;
+  }
+
+  .hero-elite-badge {
+    font-size: 9.5px !important;
+    letter-spacing: 1.5px !important;
+    padding: 6px 14px !important;
+    margin-bottom: 20px !important;
+    gap: 6px !important;
   }
 
   .nav-menu {

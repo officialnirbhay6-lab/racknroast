@@ -268,6 +268,7 @@ input, select, textarea, button {
   font-weight: 900;
   letter-spacing: 2px;
   color: var(--color-text-white);
+  white-space: nowrap;
 }
 
 .nav-menu ul {
@@ -1896,6 +1897,11 @@ input, select, textarea, button {
     width: calc(100% - 16px) !important;
     height: 60px !important;
     border-radius: 8px !important;
+  }
+
+  .brand-name {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
   }
 
   .hero-section {

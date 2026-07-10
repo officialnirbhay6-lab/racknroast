@@ -25,7 +25,7 @@
   --color-text-dark: #0B2D20;    /* Deep forest green for primary headers */
 
   /* Fonts */
-  --font-heading: 'Montserrat', sans-serif;
+  --font-heading: 'Syncopate', sans-serif;
   --font-body: 'Outfit', sans-serif;
 
   /* Spacing & Borders */
@@ -207,14 +207,23 @@ input, select, textarea, button {
 /* --- Header & Navigation --- */
 #main-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  height: 70px;
   z-index: 1000;
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#main-header.header-scrolled {
+  top: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .header-glass {
@@ -459,14 +468,14 @@ input, select, textarea, button {
 }
 
 .hero-heading {
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: clamp(28px, 4.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 24px;
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 1px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero-paragraph {
@@ -1880,13 +1889,20 @@ input, select, textarea, button {
     gap: 40px;
   }
   
+  #main-header {
+    top: 8px !important;
+    width: calc(100% - 16px) !important;
+    height: 60px !important;
+    border-radius: 8px !important;
+  }
+
   .hero-section {
     padding: 100px 16px 60px !important;
   }
 
   .hero-heading {
-    font-size: 26px !important;
-    line-height: 1.25 !important;
+    font-size: 20px !important;
+    line-height: 1.3 !important;
     margin-bottom: 12px !important;
   }
 
@@ -2072,7 +2088,7 @@ input, select, textarea, button {
   background-color: rgba(5, 10, 8, 0.6) !important; /* Semi-transparent for frosted blur */
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Full border for floating pill */
 }
 
 #main-header .brand-name {

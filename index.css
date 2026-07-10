@@ -423,7 +423,15 @@ input, select, textarea, button {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 850px;
+  max-width: 760px;
+  padding: 50px 40px;
+  background: rgba(11, 45, 32, 0.4); /* Frosted semi-transparent brand green */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  margin: 0 20px;
 }
 
 .hero-elite-badge {
@@ -1879,6 +1887,12 @@ input, select, textarea, button {
   
   .hero-section {
     padding: 100px 16px 60px !important;
+  }
+
+  .hero-content {
+    padding: 30px 16px !important;
+    border-radius: 16px !important;
+    margin: 0 12px !important;
   }
 
   .hero-heading {

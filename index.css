@@ -443,7 +443,7 @@ input, select, textarea, button {
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 2.5px;
   padding: 8px 18px;
   border-radius: 50px;
@@ -469,7 +469,7 @@ input, select, textarea, button {
 
 .hero-heading {
   font-size: clamp(28px, 4.5vw, 46px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -2162,7 +2162,7 @@ body.preloader-loading {
 .preloader-tagline {
   font-family: var(--font-heading);
   font-size: clamp(22px, 5vw, 36px);
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-brand-green);
   letter-spacing: 2px;
   text-transform: uppercase;

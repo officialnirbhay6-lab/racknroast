@@ -2065,13 +2065,13 @@ input, select, textarea, button {
   color: #a8c4b9 !important;
 }
 
-/* Header Black Overrides */
+/* Header Black Overrides - Frosted Glassmorphism Panel */
 #main-header,
 .header-glass,
 .header-scrolled {
-  background-color: #050a08 !important; /* Very dark forest green/black for solid design */
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  background-color: rgba(5, 10, 8, 0.6) !important; /* Semi-transparent for frosted blur */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 

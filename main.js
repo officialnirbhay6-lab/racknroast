@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           preloader.remove();
         }, 800);
-      }, 2000); // Hold for 2 seconds of brand appreciation
+      }, 700); // Hold for 0.7 seconds of brand appreciation
     }
 
     // Exit on load
     window.addEventListener('load', exitPreloader);
 
-    // Failsafe exit after 3.5 seconds
-    setTimeout(exitPreloader, 3500);
+    // Failsafe exit after 2.2 seconds
+    setTimeout(exitPreloader, 2200);
   }
 
   /* ==========================================

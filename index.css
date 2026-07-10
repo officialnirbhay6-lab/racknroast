@@ -1922,19 +1922,18 @@ input, select, textarea, button {
   }
 
   .hero-ctas {
-    flex-direction: row !important;
+    flex-direction: column !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 280px !important;
     margin: 0 auto !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
   
   .hero-ctas .btn {
-    flex: 1 !important;
+    width: 100% !important;
     max-width: none !important;
-    padding: 12px 8px !important;
-    font-size: 11.5px !important;
-    white-space: nowrap !important;
+    padding: 14px 24px !important;
+    font-size: 14px !important;
   }
   
   .gaming-grid {

@@ -423,15 +423,7 @@ input, select, textarea, button {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 760px;
-  padding: 50px 40px;
-  background: rgba(11, 45, 32, 0.4); /* Frosted semi-transparent brand green */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-  margin: 0 20px;
+  max-width: 850px;
 }
 
 .hero-elite-badge {
@@ -472,6 +464,9 @@ input, select, textarea, button {
   line-height: 1.1;
   margin-bottom: 24px;
   text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .hero-paragraph {
@@ -1887,12 +1882,6 @@ input, select, textarea, button {
   
   .hero-section {
     padding: 100px 16px 60px !important;
-  }
-
-  .hero-content {
-    padding: 30px 16px !important;
-    border-radius: 16px !important;
-    margin: 0 12px !important;
   }
 
   .hero-heading {

@@ -376,8 +376,9 @@ input, select, textarea, button {
 
 .mobile-nav-content a {
   font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-text-light);
 }
@@ -441,14 +442,15 @@ input, select, textarea, button {
   gap: 8px;
   background-color: rgba(11, 45, 32, 0.75); /* Dark transparent brand green */
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  color: #FAF7F0; /* Warm cream */
+  font-family: var(--font-heading);
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 2.5px;
   padding: 8px 18px;
   border-radius: 50px;
-  margin-bottom: 24px;
-  text-transform: uppercase;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .badge-dot {
@@ -469,7 +471,7 @@ input, select, textarea, button {
 
 .hero-heading {
   font-size: clamp(28px, 4.5vw, 46px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.25;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -2110,7 +2112,9 @@ input, select, textarea, button {
 
 /* Mobile Drawer Dark Theme Overrides */
 .mobile-nav-overlay {
-  background-color: #050a08 !important; /* Very dark black-green backdrop */
+  background-color: rgba(5, 10, 8, 0.75) !important; /* Semi-transparent for blur */
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
 }
 
 .mobile-nav-content a {
@@ -2126,6 +2130,8 @@ input, select, textarea, button {
   background-color: var(--color-primary) !important;
   color: #ffffff !important;
   border-color: var(--color-primary) !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
 }
 
 .mobile-nav-content .btn-mobile-nav:hover {
@@ -2162,7 +2168,7 @@ body.preloader-loading {
 .preloader-tagline {
   font-family: var(--font-heading);
   font-size: clamp(22px, 5vw, 36px);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-brand-green);
   letter-spacing: 2px;
   text-transform: uppercase;

@@ -5,6 +5,40 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================
+     0. PAGE PRELOADER (Inspiration from ballenacabo.com)
+     ========================================== */
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    // Trigger split-entrance animation
+    setTimeout(() => {
+      preloader.classList.add('preloader-active');
+    }, 150);
+
+    // Exit function
+    let exited = false;
+    function exitPreloader() {
+      if (exited) return;
+      exited = true;
+      
+      setTimeout(() => {
+        preloader.classList.add('preloader-exit');
+        document.body.classList.remove('preloader-loading');
+        
+        // Remove from DOM after slide up completes
+        setTimeout(() => {
+          preloader.remove();
+        }, 800);
+      }, 1000); // Hold for 1 second of brand appreciation
+    }
+
+    // Exit on load
+    window.addEventListener('load', exitPreloader);
+
+    // Failsafe exit after 2.5 seconds
+    setTimeout(exitPreloader, 2500);
+  }
+
+  /* ==========================================
      1. MENU DATABASE
      ========================================== */
   const MENU_ITEMS = [

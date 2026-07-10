@@ -2113,3 +2113,85 @@ input, select, textarea, button {
   background-color: var(--color-primary-hover) !important;
   border-color: var(--color-primary-hover) !important;
 }
+
+/* --- Preloader Styles (Inspiration from ballenacabo.com) --- */
+body.preloader-loading {
+  overflow: hidden !important;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: #FAF7F0; /* Warm premium brand cream */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+  will-change: transform;
+}
+
+.preloader-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 24px);
+  padding: 0 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.preloader-phrase {
+  font-family: var(--font-heading);
+  font-size: clamp(15px, 3.5vw, 28px);
+  font-weight: 700;
+  color: var(--color-brand-green);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.preloader-phrase-left {
+  transform: translateX(45px); /* Shift right towards center */
+}
+
+.preloader-phrase-right {
+  transform: translateX(-45px); /* Shift left towards center */
+}
+
+.preloader-logo {
+  width: clamp(75px, 11vw, 125px);
+  height: auto;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.preloader-logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Entrance Trigger */
+.preloader-active .preloader-phrase-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.preloader-active .preloader-phrase-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.preloader-active .preloader-logo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Exit Trigger */
+.preloader-exit {
+  transform: translateY(-100%);
+}

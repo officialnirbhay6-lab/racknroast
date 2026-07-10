@@ -9,65 +9,65 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================== */
   const MENU_ITEMS = [
     // Quick Bites
-    { id: 'q1', name: 'Classic French Fries', price: 120, category: 'quick_bites', type: 'veg', desc: 'Golden, crispy potato fries lightly salted.' },
+    { id: 'q1', name: 'French Fries', price: 120, category: 'quick_bites', type: 'veg', desc: 'Golden, crispy potato fries lightly salted.' },
     { id: 'q2', name: 'Peri Peri Fries', price: 140, category: 'quick_bites', type: 'veg', desc: 'Crispy fries tossed in spicy African Peri-Peri seasoning.' },
-    { id: 'q3', name: 'Cheese Loaded Fries', price: 180, category: 'quick_bites', type: 'veg', special: true, desc: 'Fries layered with rich melted cheese and cream sauce.' },
+    { id: 'q3', name: 'Cheese Fries', price: 180, category: 'quick_bites', type: 'veg', special: true, desc: 'Fries layered with rich melted cheese and cream sauce.' },
     { id: 'q4', name: 'Garlic Bread', price: 150, category: 'quick_bites', type: 'veg', desc: 'Toasted baguette slices brushed with garlic butter and herbs.' },
     { id: 'q5', name: 'Nachos with Cheese Dip', price: 220, category: 'quick_bites', type: 'veg', desc: 'Crispy corn tortilla chips served with warm creamy cheese dip.' },
-    { id: 'q6', name: 'Golden Onion Rings', price: 160, category: 'quick_bites', type: 'veg', desc: 'Crumbed and deep-fried sweet onion rings served with dip.' },
+    { id: 'q6', name: 'Onion Rings', price: 160, category: 'quick_bites', type: 'veg', desc: 'Crumbed and deep-fried sweet onion rings served with dip.' },
 
     // Burgers & Sandwiches
-    { id: 'b1', name: 'Classic Veg Burger', price: 160, category: 'burgers_sandwiches', type: 'veg', desc: 'Juicy vegetable patty, fresh lettuce, tomato, and house mayo.' },
-    { id: 'b2', name: 'Double Cheese Burger', price: 190, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Veggie patty layered with double cheddar cheese and pickle relish.' },
+    { id: 'b1', name: 'Veg Burger', price: 160, category: 'burgers_sandwiches', type: 'veg', desc: 'Juicy vegetable patty, fresh lettuce, tomato, and house mayo.' },
+    { id: 'b2', name: 'Cheese Burger', price: 190, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Veggie patty layered with double cheddar cheese and pickle relish.' },
     { id: 'b3', name: 'Grilled Veg Sandwich', price: 170, category: 'burgers_sandwiches', type: 'veg', desc: 'Mint chutney, seasonal vegetables, and spices grilled in sandwich bread.' },
-    { id: 'b4', name: 'Premium Club Sandwich', price: 240, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Triple decker sandwich packed with vegetables, cheese slices, and coleslaw.' },
+    { id: 'b4', name: 'Club Sandwich', price: 240, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Triple decker sandwich packed with vegetables, cheese slices, and coleslaw.' },
 
     // Pizzas
-    { id: 'p1', name: 'Classic Margherita Pizza', price: 250, category: 'pizzas', type: 'veg', desc: 'Rich tomato sauce, fresh mozzarella, olive oil, and fresh basil.' },
+    { id: 'p1', name: 'Margherita Pizza', price: 250, category: 'pizzas', type: 'veg', desc: 'Rich tomato sauce, fresh mozzarella, olive oil, and fresh basil.' },
     { id: 'p2', name: 'Farm Fresh Pizza', price: 320, category: 'pizzas', type: 'veg', desc: 'Loaded with capsicum, onion, tomatoes, sweet corn, and mushrooms.' },
     { id: 'p3', name: 'Paneer Tikka Pizza', price: 350, category: 'pizzas', type: 'veg', special: true, desc: 'Tandoori paneer tikka cubes, red onions, capsicum, and coriander.' },
     { id: 'p4', name: 'Veg Supreme Pizza', price: 390, category: 'pizzas', type: 'veg', desc: 'Assorted premium vegetables, black olives, jalapenos, and extra cheese.' },
 
     // Pasta
-    { id: 'pa1', name: 'White Sauce Creamy Pasta', price: 250, category: 'pasta', type: 'veg', desc: 'Penne pasta tossed in rich, buttery, cheesy Alfredo sauce.' },
-    { id: 'pa2', name: 'Red Sauce Arrabiata Pasta', price: 240, category: 'pasta', type: 'veg', desc: 'Penne pasta cooked in spicy tomato sauce, garlic, and red chili flakes.' },
+    { id: 'pa1', name: 'White Sauce Pasta', price: 250, category: 'pasta', type: 'veg', desc: 'Penne pasta tossed in rich, buttery, cheesy Alfredo sauce.' },
+    { id: 'pa2', name: 'Red Sauce Pasta', price: 240, category: 'pasta', type: 'veg', desc: 'Penne pasta cooked in spicy tomato sauce, garlic, and red chili flakes.' },
 
     // Wraps & Rolls
     { id: 'w1', name: 'Paneer Tikka Wrap', price: 220, category: 'wraps_rolls', type: 'veg', desc: 'Grilled paneer tikka wrapped with crisp onions and mint mayo.' },
-    { id: 'w2', name: 'Crunchy Veggie Wrap', price: 180, category: 'wraps_rolls', type: 'veg', desc: 'Crispy veggie fingers wrapped with salsa and fresh coleslaw.' },
+    { id: 'w2', name: 'Veg Wrap', price: 180, category: 'wraps_rolls', type: 'veg', desc: 'Crispy veggie fingers wrapped with salsa and fresh coleslaw.' },
 
     // Main Snacks
     { id: 's1', name: 'Paneer Chilli', price: 280, category: 'main_snacks', type: 'veg', special: true, desc: 'Paneer cubes tossed with bell peppers, green chilies, and dark soy sauce.' },
-    { id: 's2', name: 'Veg Manchurian Gravy', price: 240, category: 'main_snacks', type: 'veg', desc: 'Crispy fried veg balls in sweet, tangy, and slightly spicy gravy.' },
+    { id: 's2', name: 'Veg Manchurian', price: 240, category: 'main_snacks', type: 'veg', desc: 'Crispy fried veg balls in sweet, tangy, and slightly spicy gravy.' },
 
     // Desserts
     { id: 'd1', name: 'Brownie with Ice Cream', price: 220, category: 'desserts', type: 'veg', desc: 'Warm sizzling chocolate brownie topped with vanilla ice cream scoop.' },
-    { id: 'd2', name: 'Sizzling Chocolate Lava Cake', price: 180, category: 'desserts', type: 'veg', special: true, desc: 'Molten liquid chocolate core inside a soft chocolate cake casing.' },
-    { id: 'd3', name: 'New York Cheesecake', price: 250, category: 'desserts', type: 'veg', special: true, desc: 'Rich, smooth cream cheese cake base with sweet berry compote drizzle.' },
+    { id: 'd2', name: 'Chocolate Lava Cake', price: 180, category: 'desserts', type: 'veg', special: true, desc: 'Molten liquid chocolate core inside a soft chocolate cake casing.' },
+    { id: 'd3', name: 'Cheesecake', price: 250, category: 'desserts', type: 'veg', special: true, desc: 'Rich, smooth cream cheese cake base with sweet berry compote drizzle.' },
 
     // Hot Beverages
     { id: 'h1', name: 'Espresso', price: 80, category: 'hot_beverages', type: 'veg', desc: 'Strong, rich, and aromatic shot of pure dark roast coffee.' },
     { id: 'h2', name: 'Americano', price: 100, category: 'hot_beverages', type: 'veg', desc: 'Espresso shots topped up with hot water for full coffee aroma.' },
-    { id: 'h3', name: 'Classic Cappuccino', price: 120, category: 'hot_beverages', type: 'veg', desc: 'Espresso balanced with steamed milk and thick layer of silky foam.' },
+    { id: 'h3', name: 'Cappuccino', price: 120, category: 'hot_beverages', type: 'veg', desc: 'Espresso balanced with steamed milk and thick layer of silky foam.' },
     { id: 'h4', name: 'Café Latte', price: 130, category: 'hot_beverages', type: 'veg', desc: 'Milky coffee featuring rich espresso layered with steamed milk.' },
-    { id: 'h5', name: 'Café Mocha', price: 150, category: 'hot_beverages', type: 'veg', desc: 'Espresso combined with dark chocolate sauce, steamed milk, and foam.' },
-    { id: 'h6', name: 'Rich Hot Chocolate', price: 150, category: 'hot_beverages', type: 'veg', special: true, desc: 'Velvety melted chocolate drink topped with fine cocoa powder dust.' },
-    { id: 'h7', name: 'Adrak Masala Tea', price: 60, category: 'hot_beverages', type: 'veg', desc: 'Traditional Indian tea infused with crushed ginger, cardamom, and herbs.' },
-    { id: 'h8', name: 'Organic Green Tea', price: 70, category: 'hot_beverages', type: 'veg', desc: 'Healthy antioxidant green tea leaves brewed to perfection.' },
+    { id: 'h5', name: 'Mocha', price: 150, category: 'hot_beverages', type: 'veg', desc: 'Espresso combined with dark chocolate sauce, steamed milk, and foam.' },
+    { id: 'h6', name: 'Hot Chocolate', price: 150, category: 'hot_beverages', type: 'veg', special: true, desc: 'Velvety melted chocolate drink topped with fine cocoa powder dust.' },
+    { id: 'h7', name: 'Masala Tea', price: 60, category: 'hot_beverages', type: 'veg', desc: 'Traditional Indian tea infused with crushed ginger, cardamom, and herbs.' },
+    { id: 'h8', name: 'Green Tea', price: 70, category: 'hot_beverages', type: 'veg', desc: 'Healthy antioxidant green tea leaves brewed to perfection.' },
 
     // Cold Beverages
-    { id: 'c1', name: 'Premium Cold Coffee', price: 140, category: 'cold_beverages', type: 'veg', desc: 'Chilled blended milk, espresso, sugar, and cream vanilla scoop.' },
-    { id: 'c2', name: 'Chilled Iced Latte', price: 150, category: 'cold_beverages', type: 'veg', desc: 'Iced espresso poured over chilled milk with caramel flavor.' },
-    { id: 'c3', name: 'Double Chocolate Shake', price: 180, category: 'cold_beverages', type: 'veg', desc: 'Rich chocolate ice cream milkshake topped with syrup shavings.' },
-    { id: 'c4', name: 'Creamy Oreo Shake', price: 190, category: 'cold_beverages', type: 'veg', desc: 'Vanilla shake blended with crushed Oreo cookies and whipped cream.' },
-    { id: 'c5', name: 'Vanilla Bean Shake', price: 170, category: 'cold_beverages', type: 'veg', desc: 'Classic thick shake blended with pure Madagascar vanilla extract.' },
+    { id: 'c1', name: 'Cold Coffee', price: 140, category: 'cold_beverages', type: 'veg', desc: 'Chilled blended milk, espresso, sugar, and cream vanilla scoop.' },
+    { id: 'c2', name: 'Iced Latte', price: 150, category: 'cold_beverages', type: 'veg', desc: 'Iced espresso poured over chilled milk with caramel flavor.' },
+    { id: 'c3', name: 'Chocolate Shake', price: 180, category: 'cold_beverages', type: 'veg', desc: 'Rich chocolate ice cream milkshake topped with syrup shavings.' },
+    { id: 'c4', name: 'Oreo Shake', price: 190, category: 'cold_beverages', type: 'veg', desc: 'Vanilla shake blended with crushed Oreo cookies and whipped cream.' },
+    { id: 'c5', name: 'Vanilla Shake', price: 170, category: 'cold_beverages', type: 'veg', desc: 'Classic thick shake blended with pure Madagascar vanilla extract.' },
     { id: 'c6', name: 'Fresh Lime Soda', price: 90, category: 'cold_beverages', type: 'veg', desc: 'Sparkling soda water mixed with fresh lime juice, sugar, and salt.' },
-    { id: 'c7', name: 'Mojito (Virgin Mint)', price: 140, category: 'cold_beverages', type: 'veg', special: true, desc: 'Refreshing splash of fresh mint leaves, lime wedges, sugar, and sparkling club soda.' }
+    { id: 'c7', name: 'Mojito (Virgin)', price: 140, category: 'cold_beverages', type: 'veg', special: true, desc: 'Refreshing splash of fresh mint leaves, lime wedges, sugar, and sparkling club soda.' }
   ];
 
   /* State Variables */
   let cart = {}; // Tracks item quantities by id: { q3: 1, b4: 2 }
-  let currentCategory = 'all';
+  let currentCategory = 'quick_bites';
   let searchQuery = '';
 
   /* ==========================================
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Filter database
     const filteredItems = MENU_ITEMS.filter(item => {
-      const matchesCategory = (currentCategory === 'all' || item.category === currentCategory);
+      const matchesCategory = (searchQuery.trim() !== '' || item.category === currentCategory);
       const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                             item.desc.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
         <div class="menu-card-header">
-          <h4>${item.name}</h4>
+          <h4>${item.name} <span class="veg-badge-inline" title="Pure Veg"><span class="veg-dot"></span></span></h4>
           <span class="item-price">₹${item.price}</span>
         </div>
         <div class="menu-card-body">

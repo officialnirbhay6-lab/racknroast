@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message += '\nPlease confirm my reservation request. Thank you!';
 
       // Encode and open WhatsApp URL
-      const whatsappUrl = `https://wa.me/919845989785?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/919801984585?text=${encodeURIComponent(message)}`;
 
       // Construct pretty UI confirmation
       successAlert.innerHTML = `
@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message += 'Please confirm my order and let me know the preparation time. Thank you!';
 
       // Encode and open WhatsApp URL
-      const whatsappUrl = `https://wa.me/919845989785?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/919801984585?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
   }

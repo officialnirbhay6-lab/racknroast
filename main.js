@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'None Selected';
 
-        message += 'I would like to book a Birthday Celebration Package:\n\n';
+        message += 'I would like to book a Birthday / Anniversary Package:\n\n';
         message += `• Name: ${name}\n`;
         message += `• Phone: ${phone}\n`;
         message += `• Date: ${date}\n`;

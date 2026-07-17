@@ -431,10 +431,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================
      7. FORM SUBMISSION INQUIRY SIMULATION
      ========================================== */
+  const bookingCenter = document.getElementById('booking-center');
   const reservationForm = document.getElementById('reservation-form');
   const successAlert = document.getElementById('form-success-alert');
 
-  if (reservationForm) {
+  if (reservationForm && bookingCenter) {
     // Set tomorrow's date as default in form
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -444,6 +445,77 @@ document.addEventListener('DOMContentLoaded', () => {
       dateInput.min = new Date().toISOString().split('T')[0];
     }
 
+    // 1. Tab Switching Logic
+    const tabs = bookingCenter.querySelectorAll('.booking-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const activeTab = tab.getAttribute('data-tab');
+        bookingCenter.setAttribute('data-active-tab', activeTab);
+      });
+    });
+
+    // 2. Select Package click logic from Celebrations section
+    const selectPackageBtns = document.querySelectorAll('.btn-select-package');
+    selectPackageBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pkg = btn.getAttribute('data-package');
+        // Switch tab to birthday
+        const birthdayTab = bookingCenter.querySelector('.booking-tab[data-tab="birthday"]');
+        if (birthdayTab) birthdayTab.click();
+        
+        // Select corresponding dropdown option
+        const packageSelect = document.getElementById('form-package');
+        if (packageSelect) {
+          packageSelect.value = pkg;
+        }
+
+        // Scroll to form card
+        bookingCenter.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // 3. Select Gaming triggers from calculator / combos
+    const bookGamingBtn = document.querySelector('.btn-book-gaming');
+    if (bookGamingBtn) {
+      bookGamingBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const gamingTab = bookingCenter.querySelector('.booking-tab[data-tab="gaming"]');
+        if (gamingTab) gamingTab.click();
+        bookingCenter.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    const bookGamingComboBtn = document.querySelector('.btn-book-gaming-combo');
+    if (bookGamingComboBtn) {
+      bookGamingComboBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const gamingTab = bookingCenter.querySelector('.booking-tab[data-tab="gaming"]');
+        if (gamingTab) gamingTab.click();
+        
+        const gameSelect = document.getElementById('form-game');
+        if (gameSelect) gameSelect.value = 'combo-unlimited';
+        
+        bookingCenter.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    const bookVipComboBtn = document.querySelector('.btn-book-vip-combo');
+    if (bookVipComboBtn) {
+      bookVipComboBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const gamingTab = bookingCenter.querySelector('.booking-tab[data-tab="gaming"]');
+        if (gamingTab) gamingTab.click();
+        
+        const gameSelect = document.getElementById('form-game');
+        if (gameSelect) gameSelect.value = 'combo-unlimited';
+        
+        bookingCenter.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // 4. Form Submit Handler
     reservationForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -451,26 +523,65 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('form-phone').value;
       const date = document.getElementById('form-date').value;
       const time = document.getElementById('form-time').value;
-      const activityVal = document.getElementById('form-activity').value;
-      const guests = document.getElementById('form-guests').value;
       const notes = document.getElementById('form-message').value;
+      const activeTab = bookingCenter.getAttribute('data-active-tab');
 
-      // Translate activity code to pretty string
-      let activityName = activityVal;
-      if (activityVal === 'pool') activityName = 'Pool Table Arena';
-      else if (activityVal === 'snooker') activityName = 'Snooker Table Arena';
-      else if (activityVal === 'gaming') activityName = 'PS5 & VR2 Lounge';
-      else if (activityVal === 'dining') activityName = 'Rooftop Dining Only';
-      else if (activityVal === 'combo') activityName = 'All-in-One Play & Dine';
+      // Compile booking details message
+      let message = 'Hello Rack n Roast! 🎮🍽️\n';
+      
+      if (activeTab === 'gaming') {
+        const gameSelect = document.getElementById('form-game');
+        const gameText = gameSelect.options[gameSelect.selectedIndex].text;
+        const durationSelect = document.getElementById('form-game-hours');
+        const durationText = durationSelect.options[durationSelect.selectedIndex].text;
+        const players = document.getElementById('form-gaming-guests').value;
 
-      // Construct booking details message
-      let message = 'Hello Rack n Roast! 🎮🍽️\nI would like to book a reservation:\n\n';
-      message += `• Name: ${name}\n`;
-      message += `• Phone: ${phone}\n`;
-      message += `• Date: ${date}\n`;
-      message += `• Time: ${time}\n`;
-      message += `• Guests: ${guests} People\n`;
-      message += `• Activity Interest: ${activityName}\n`;
+        message += 'I would like to book a Gaming Arena Slot:\n\n';
+        message += `• Name: ${name}\n`;
+        message += `• Phone: ${phone}\n`;
+        message += `• Date: ${date}\n`;
+        message += `• Time: ${time}\n`;
+        message += `• Arena Game: ${gameText}\n`;
+        message += `• Slot Duration: ${durationText}\n`;
+        message += `• Number of Players: ${players}\n`;
+      } 
+      else if (activeTab === 'dining') {
+        const guests = document.getElementById('form-dining-guests').value;
+        const seatingSelect = document.getElementById('form-seating');
+        const seatingText = seatingSelect.options[seatingSelect.selectedIndex].text;
+
+        message += 'I would like to book a Rooftop Dining Table:\n\n';
+        message += `• Name: ${name}\n`;
+        message += `• Phone: ${phone}\n`;
+        message += `• Date: ${date}\n`;
+        message += `• Time: ${time}\n`;
+        message += `• Number of Guests: ${guests} People\n`;
+        message += `• Seating Preference: ${seatingText}\n`;
+      } 
+      else if (activeTab === 'birthday') {
+        const packageSelect = document.getElementById('form-package');
+        const packageText = packageSelect.options[packageSelect.selectedIndex].text;
+        const guests = document.getElementById('form-birthday-guests').value;
+        
+        // Gather selected add-ons
+        let selectedAddons = [];
+        if (document.getElementById('addon-reel').checked) selectedAddons.push('Professional Reels (₹1,000)');
+        if (document.getElementById('addon-decor').checked) selectedAddons.push('Premium Theme Decoration');
+        if (document.getElementById('addon-cake').checked) selectedAddons.push('Cake Arrangement');
+        if (document.getElementById('addon-photo').checked) selectedAddons.push('Photography Coverage');
+        
+        const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'None Selected';
+
+        message += 'I would like to book a Birthday Celebration Package:\n\n';
+        message += `• Name: ${name}\n`;
+        message += `• Phone: ${phone}\n`;
+        message += `• Date: ${date}\n`;
+        message += `• Time: ${time}\n`;
+        message += `• Selected Package: ${packageText}\n`;
+        message += `• Number of Guests: ${guests} People\n`;
+        message += `• Selected Add-Ons: ${addonsText}\n`;
+      }
+
       if (notes.trim()) {
         message += `• Special Instructions: ${notes}\n`;
       }
@@ -488,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message += `  Estimated Subtotal: ₹${cartSubtotalVal.textContent}\n`;
       }
 
-      message += '\nPlease confirm my reservation request. Thank you!';
+      message += '\nPlease confirm my booking request. Thank you!';
 
       // Encode and open WhatsApp URL
       const whatsappUrl = `https://wa.me/919801984585?text=${encodeURIComponent(message)}`;
@@ -497,7 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
       successAlert.innerHTML = `
         <div style="display: flex; flex-direction: column; gap: 8px;">
           <p><strong><i class="fa-solid fa-circle-check"></i> Redirecting to WhatsApp...</strong></p>
-          <p>Hi ${name}, we are opening WhatsApp to send your reservation request directly to Rack n Roast!</p>
+          <p>Hi ${name}, we are opening WhatsApp to send your booking details directly to Rack n Roast!</p>
           <p>If the window doesn't open automatically, please <a href="${whatsappUrl}" target="_blank" style="color: var(--color-primary); text-decoration: underline;">click here</a>.</p>
         </div>
       `;
@@ -512,6 +623,10 @@ document.addEventListener('DOMContentLoaded', () => {
         reservationForm.reset();
         reservationForm.style.display = 'block';
         successAlert.style.display = 'none';
+        
+        // Reset active tab to gaming
+        const gamingTab = bookingCenter.querySelector('.booking-tab[data-tab="gaming"]');
+        if (gamingTab) gamingTab.click();
         
         // Clear cart
         cart = {};

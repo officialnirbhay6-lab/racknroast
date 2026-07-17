@@ -108,13 +108,14 @@
           <li><a href="#gaming">Play Zone</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#combos">Combos</a></li>
+          <li><a href="#celebrations">Celebrations</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <!-- CTA and Hamburger -->
       <div class="header-actions">
-        <a href="#contact" class="btn btn-primary btn-nav">Book Table</a>
+        <a href="#booking-center" class="btn btn-primary btn-nav">Book Now</a>
         <button id="menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -133,9 +134,10 @@
         <li><a href="#gaming" class="mobile-link">Play Zone</a></li>
         <li><a href="#menu" class="mobile-link">Menu</a></li>
         <li><a href="#combos" class="mobile-link">Combos</a></li>
+        <li><a href="#celebrations" class="mobile-link">Celebrations</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary btn-mobile-nav mobile-link">Book Table</a>
+      <a href="#booking-center" class="btn btn-primary btn-mobile-nav mobile-link">Book Now</a>
     </div>
   </div>
 
@@ -353,7 +355,7 @@
               <h4>Estimated Gaming Total</h4>
               <div class="total-price">₹<span id="calc-total-val">0</span></div>
               <p class="calc-tip"><i class="fa-solid fa-lightbulb highlight"></i> Tip: Booking a package? Check out our <strong>Unlimited Fun Combo</strong> below which includes a 1 Hour game table + full meal!</p>
-              <a href="#contact" class="btn btn-primary btn-block">Reserve Gaming Slot</a>
+              <a href="#booking-center" class="btn btn-primary btn-block btn-book-gaming">Reserve Gaming Slot</a>
             </div>
           </div>
         </div>
@@ -473,7 +475,7 @@
             <li><i class="fa-solid fa-utensils"></i> French Fries</li>
             <li><i class="fa-solid fa-utensils"></i> 2 Soft Drinks</li>
           </ul>
-          <a href="#contact" class="btn btn-primary btn-combo">Order Combo</a>
+          <a href="#booking-center" class="btn btn-primary btn-combo btn-book-gaming-combo">Order Combo</a>
         </div>
 
         <!-- Unlimited Fun Combo -->
@@ -490,7 +492,152 @@
             <li><i class="fa-solid fa-utensils"></i> Food Combo Included</li>
             <li><i class="fa-solid fa-wifi"></i> VIP Seating & Free Wi-Fi</li>
           </ul>
-          <a href="#contact" class="btn btn-secondary btn-combo-premium">Book VIP Combo</a>
+          <a href="#booking-center" class="btn btn-secondary btn-combo-premium btn-book-vip-combo">Book VIP Combo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrations Section -->
+  <section id="celebrations" class="celebrations-section section-padding bg-dark">
+    <div class="container">
+      <div class="text-center section-header">
+        <span class="section-subtitle">CELEBRATE BIG • MEMORIES FOREVER</span>
+        <h2 class="section-title">Birthday Celebration <span class="highlight">Packages</span></h2>
+        <p class="section-desc">Choose from our carefully curated birthday bundles combining elite decoration, entertainment systems, and delicious veg meals. Great Food • Great Games • Great Vibes.</p>
+      </div>
+
+      <div class="celebrations-grid">
+        <!-- Silver Package -->
+        <div class="package-card silver-card reveal-up">
+          <div class="package-header">
+            <span class="package-badge">SILVER PACKAGE</span>
+            <div class="package-price">₹2,999</div>
+            <span class="package-guests">Perfect for 4-8 Guests</span>
+          </div>
+          <div class="package-body">
+            <ul class="package-inclusions">
+              <li><span class="incl-icon">🎈</span> Basic Balloon Decoration</li>
+              <li><span class="incl-icon">💡</span> Happy Birthday Neon Setup</li>
+              <li><span class="incl-icon">⏰</span> Reserved Celebration Area (1 Hour)</li>
+              <li><span class="incl-icon">🎵</span> Bluetooth Music System</li>
+              <li><span class="incl-icon">🎂</span> Cake Table Setup</li>
+            </ul>
+            
+            <div class="package-meals">
+              <span class="meals-title">🍔 Combo Meal for 4</span>
+              <ul class="meals-list">
+                <li>1 Regular Pizza</li>
+                <li>4 Veg Burgers</li>
+                <li>4 French Fries</li>
+                <li>4 Cold Drinks</li>
+              </ul>
+            </div>
+            
+            <button type="button" class="btn btn-secondary btn-select-package" data-package="silver">Book Silver Package</button>
+          </div>
+        </div>
+
+        <!-- Gold Package -->
+        <div class="package-card gold-card reveal-up" style="animation-delay: 0.15s;">
+          <div class="package-header">
+            <span class="package-badge">GOLD PACKAGE</span>
+            <div class="package-price">₹5,999</div>
+            <span class="package-guests">Perfect for 8-15 Guests</span>
+          </div>
+          <div class="package-body">
+            <ul class="package-inclusions">
+              <li><span class="incl-icon">🎈</span> Premium Balloon Decoration</li>
+              <li><span class="incl-icon">💡</span> LED Happy Birthday Backdrop</li>
+              <li><span class="incl-icon">⏰</span> Reserved Celebration Area (2 Hours)</li>
+              <li><span class="incl-icon">🍹</span> Welcome Mocktail for Guests</li>
+              <li><span class="incl-icon">🎵</span> Music System</li>
+              <li><span class="incl-icon">🎂</span> Cake Table Setup</li>
+            </ul>
+            
+            <div class="package-meals">
+              <span class="meals-title">🍔 Combo Meal for 8</span>
+              <ul class="meals-list">
+                <li>2 Regular Pizzas</li>
+                <li>8 Veg Burgers</li>
+                <li>2 Pasta (Any)</li>
+                <li>2 French Fries</li>
+                <li>8 Cold Drinks</li>
+              </ul>
+            </div>
+            
+            <button type="button" class="btn btn-primary btn-select-package" data-package="gold">Book Gold Package</button>
+          </div>
+        </div>
+
+        <!-- Diamond Package -->
+        <div class="package-card diamond-card reveal-up" style="animation-delay: 0.3s;">
+          <div class="package-header">
+            <span class="package-badge">DIAMOND PACKAGE</span>
+            <div class="package-price">₹9,999</div>
+            <span class="package-guests">Perfect for 15-25 Guests</span>
+          </div>
+          <div class="package-body">
+            <ul class="package-inclusions">
+              <li><span class="incl-icon">🎈</span> Luxury Balloon Decoration</li>
+              <li><span class="incl-icon">💡</span> Premium LED Backdrop & Fairy Lights</li>
+              <li><span class="incl-icon">⏰</span> Reserved Celebration Area (3 Hours)</li>
+              <li><span class="incl-icon">🍹</span> Welcome Drinks for Guests</li>
+              <li><span class="incl-icon">🧑‍💼</span> Dedicated Staff Assistance</li>
+            </ul>
+            
+            <div class="package-meals">
+              <span class="meals-title">🍔 Combo Meal for 15</span>
+              <ul class="meals-list">
+                <li>3 Large Pizzas</li>
+                <li>15 Veg Burgers</li>
+                <li>3 Pasta (Any)</li>
+                <li>3 French Fries</li>
+                <li>15 Cold Drinks</li>
+              </ul>
+            </div>
+            
+            <button type="button" class="btn btn-secondary btn-select-package" data-package="diamond">Book Diamond Package</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add-ons Sub-Section -->
+      <div class="addons-container reveal-up">
+        <h3 class="addons-header">🌟 Available Add-Ons</h3>
+        <div class="addons-grid">
+          <div class="addon-item">
+            <div class="addon-icon">🎬</div>
+            <div class="addon-details">
+              <h4>Professional Reel</h4>
+              <p>3 Cinematic Reels + 20 Edited Photos</p>
+              <span class="addon-price">₹1,000</span>
+            </div>
+          </div>
+          <div class="addon-item">
+            <div class="addon-icon">🎂</div>
+            <div class="addon-details">
+              <h4>Cake Arrangement</h4>
+              <p>Custom designs curated to your taste</p>
+              <span class="addon-price">Chargeable</span>
+            </div>
+          </div>
+          <div class="addon-item">
+            <div class="addon-icon">🎈</div>
+            <div class="addon-details">
+              <h4>Premium Theme Decoration</h4>
+              <p>Custom tailored themes to fit your style</p>
+              <span class="addon-price">Custom Pricing</span>
+            </div>
+          </div>
+          <div class="addon-item">
+            <div class="addon-icon">📸</div>
+            <div class="addon-details">
+              <h4>Professional Photography</h4>
+              <p>Dedicated camera coverage for your event</p>
+              <span class="addon-price">On Request</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -561,9 +708,18 @@
 
         <!-- Stylized Form -->
         <div class="contact-form-area reveal-right">
-          <div class="form-card">
-            <h3>Online Reservation Inquiry</h3>
+          <div class="form-card" id="booking-center" data-active-tab="gaming">
+            <h3 class="text-center">Easy Booking Center</h3>
+            
+            <!-- Booking Tabs -->
+            <div class="booking-tabs">
+              <button type="button" class="booking-tab active" data-tab="gaming">🎮 Gaming</button>
+              <button type="button" class="booking-tab" data-tab="dining">🍽️ Dining</button>
+              <button type="button" class="booking-tab" data-tab="birthday">🎂 Birthday</button>
+            </div>
+            
             <form id="reservation-form">
+              <!-- Shared Fields Row 1 -->
               <div class="form-row">
                 <div class="form-group">
                   <label for="form-name">Full Name</label>
@@ -574,6 +730,8 @@
                   <input type="tel" id="form-phone" placeholder="9876543210" required>
                 </div>
               </div>
+              
+              <!-- Shared Fields Row 2 -->
               <div class="form-row">
                 <div class="form-group">
                   <label for="form-date">Date</label>
@@ -584,27 +742,95 @@
                   <input type="time" id="form-time" required>
                 </div>
               </div>
-              <div class="form-row">
+              
+              <!-- Tab-Specific Field: Gaming -->
+              <div class="form-row tab-only-gaming">
                 <div class="form-group">
-                  <label for="form-activity">Primary Interest</label>
-                  <select id="form-activity">
-                    <option value="dining">Rooftop Dining Only</option>
-                    <option value="pool">Pool Session (₹200/hr)</option>
-                    <option value="snooker">Snooker Session (₹300/hr)</option>
-                    <option value="psvr">PS5/VR Session (₹250/hr)</option>
-                    <option value="combo">Gaming + Dining Combo</option>
+                  <label for="form-game">Choose Arena Game</label>
+                  <select id="form-game">
+                    <option value="pool">Pool Table Session (₹200/hr)</option>
+                    <option value="snooker">Snooker Table Session (₹300/hr)</option>
+                    <option value="ps5">PlayStation 5 / VR2 Lounge (₹250/hr)</option>
+                    <option value="combo-unlimited">Unlimited Fun Combo (₹1299)</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="form-guests">Number of Guests</label>
-                  <input type="number" id="form-guests" min="1" max="50" value="2" required>
+                  <label for="form-game-hours">Duration</label>
+                  <select id="form-game-hours">
+                    <option value="1">1 Hour Slot</option>
+                    <option value="2">2 Hours Slot</option>
+                    <option value="3">3 Hours Slot</option>
+                    <option value="4">4+ Hours Slot</option>
+                  </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="form-message">Special Instructions / Food Preferences</label>
-                <textarea id="form-message" rows="3" placeholder="Tell us if you want to book a specific table, order food in advance, or have specific requirements..."></textarea>
+              <div class="form-row tab-only-gaming">
+                <div class="form-group">
+                  <label for="form-gaming-guests">Number of Players</label>
+                  <input type="number" id="form-gaming-guests" min="1" max="15" value="2">
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Book via WhatsApp 💬</button>
+              
+              <!-- Tab-Specific Field: Dining -->
+              <div class="form-row tab-only-dining">
+                <div class="form-group">
+                  <label for="form-dining-guests">Number of Guests</label>
+                  <input type="number" id="form-dining-guests" min="1" max="50" value="2">
+                </div>
+                <div class="form-group">
+                  <label for="form-seating">Seating Preference</label>
+                  <select id="form-seating">
+                    <option value="rooftop">Open-Air Rooftop Terrace</option>
+                    <option value="indoor">Indoor Cozy Lounge</option>
+                    <option value="no-pref">No Seating Preference</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Tab-Specific Field: Birthday -->
+              <div class="form-row tab-only-birthday">
+                <div class="form-group">
+                  <label for="form-package">Select Package</label>
+                  <select id="form-package">
+                    <option value="silver">Silver Birthday Package (₹2,999)</option>
+                    <option value="gold">Gold Birthday Package (₹5,999)</option>
+                    <option value="diamond">Diamond Birthday Package (₹9,999)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-birthday-guests">Number of Guests</label>
+                  <input type="number" id="form-birthday-guests" min="1" max="100" value="8">
+                </div>
+              </div>
+              <div class="form-group tab-only-birthday">
+                <label>Add-Ons Selection</label>
+                <div class="addons-checkbox-grid">
+                  <label class="addon-checkbox-item">
+                    <input type="checkbox" id="addon-reel" value="Professional Reel (₹1,000)">
+                    <span>🎥 Professional Reel (+₹1,000)</span>
+                  </label>
+                  <label class="addon-checkbox-item">
+                    <input type="checkbox" id="addon-decor" value="Premium Custom Decoration">
+                    <span>🎈 Premium Theme Decor</span>
+                  </label>
+                  <label class="addon-checkbox-item">
+                    <input type="checkbox" id="addon-cake" value="Cake Arrangement">
+                    <span>🎂 Cake Arrangement</span>
+                  </label>
+                  <label class="addon-checkbox-item">
+                    <input type="checkbox" id="addon-photo" value="Professional Photography">
+                    <span>📸 Photography Coverage</span>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Shared Instructions Field -->
+              <div class="form-group">
+                <label for="form-message">Special Instructions / Requests</label>
+                <textarea id="form-message" rows="3" placeholder="Let us know if you have specific timing, decoration themes, food selections, or custom requirements..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">Confirm Booking via WhatsApp 💬</button>
             </form>
             <div id="form-success-alert" class="success-message" style="display:none;">
               <i class="fa-solid fa-circle-check"></i> Thank you! Your reservation inquiry has been simulated successfully. We'll show confirmation details in a moment.

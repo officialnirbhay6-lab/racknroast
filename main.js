@@ -566,8 +566,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Gather selected add-ons
         let selectedAddons = [];
         if (document.getElementById('addon-reel').checked) selectedAddons.push('Professional Reels (₹1,000)');
-        if (document.getElementById('addon-decor').checked) selectedAddons.push('Premium Theme Decoration');
-        if (document.getElementById('addon-cake').checked) selectedAddons.push('Cake Arrangement');
+        if (document.getElementById('addon-decor').checked) selectedAddons.push('Premium Theme Decoration (₹2,000)');
+        if (document.getElementById('addon-cake').checked) selectedAddons.push('Cake Arrangement (₹1,000)');
         if (document.getElementById('addon-photo').checked) selectedAddons.push('Photography Coverage');
         
         const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'None Selected';

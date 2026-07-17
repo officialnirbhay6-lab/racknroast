@@ -154,6 +154,7 @@ input, select, textarea, button {
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -211,7 +212,7 @@ input, select, textarea, button {
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
-  max-width: 1200px;
+  max-width: 1400px;
   height: 70px;
   z-index: 1000;
   transition: var(--transition-smooth);
@@ -273,7 +274,7 @@ input, select, textarea, button {
 
 .nav-menu ul {
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-menu a {
@@ -284,6 +285,7 @@ input, select, textarea, button {
   color: var(--color-text-muted);
   position: relative;
   padding: 8px 0;
+  white-space: nowrap;
 }
 
 .nav-menu a:hover,

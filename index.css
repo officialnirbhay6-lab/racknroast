@@ -2240,6 +2240,10 @@ body.preloader-loading {
   color: #FAF7F0;
 }
 
+.celebrations-section h2 {
+  color: #ffffff !important;
+}
+
 .celebrations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

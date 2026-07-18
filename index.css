@@ -1928,16 +1928,16 @@ input, select, textarea, button {
   }
 
   .hero-heading {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    letter-spacing: 1.5px !important;
-    margin-bottom: 12px !important;
+    font-size: 23px !important;
+    line-height: 1.35 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 14px !important;
   }
 
   .hero-paragraph {
-    font-size: 13px !important;
+    font-size: 14px !important;
     margin-bottom: 24px !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
   }
 
   .hero-ctas {
@@ -1958,9 +1958,21 @@ input, select, textarea, button {
   .gaming-grid {
     grid-template-columns: 1fr;
   }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  }
+
+  .section-padding {
+    padding: 60px 0 !important;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 16px !important;
+  }
+
   .features-container {
     grid-template-columns: 1fr;
   }
@@ -1980,11 +1992,42 @@ input, select, textarea, button {
   }
   
   .contact-card, .form-card {
-    padding: 24px;
+    padding: 20px 16px !important;
   }
   
   .calc-card {
-    padding: 24px;
+    padding: 20px 16px !important;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .combos-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .booking-tabs {
+    flex-direction: column !important;
+    gap: 8px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .booking-tab {
+    width: 100% !important;
+  }
+
+  /* Preloader Mobile Optimization */
+  .preloader-tagline {
+    font-size: 14px !important;
+    letter-spacing: 1.5px !important;
+  }
+  
+  .preloader-logo {
+    width: 75px !important;
   }
 }
 

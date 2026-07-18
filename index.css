@@ -46,6 +46,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -55,6 +57,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -154,7 +157,10 @@ input, select, textarea, button {
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition: var(--transition-smooth);
-  white-space: nowrap;
+}
+
+.btn-nav {
+  white-space: nowrap !important;
 }
 
 .btn-primary {

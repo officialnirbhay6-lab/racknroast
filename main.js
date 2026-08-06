@@ -129,6 +129,19 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'sp2', name: 'Manchow Soup', price: 145, category: 'soup', type: 'veg', desc: 'Spicy Indo-Chinese veg soup topped with crispy fried noodles.' },
     { id: 'sp3', name: 'Sweet Corn Soup', price: 125, category: 'soup', type: 'veg', desc: 'Comforting soup with sweet corn kernels & garden vegetables.' },
 
+    // Hot Beverages
+    { id: 'hb1', name: 'Espresso', price: 100, category: 'hot_beverages', type: 'veg', desc: 'Strong, rich, and aromatic shot of pure dark roast coffee.' },
+    { id: 'hb2', name: 'Americano', price: 120, category: 'hot_beverages', type: 'veg', desc: 'Espresso shots topped up with hot water for full coffee aroma.' },
+    { id: 'hb3', name: 'Cappuccino', price: 120, category: 'hot_beverages', type: 'veg', desc: 'Espresso balanced with steamed milk and thick layer of silky foam.' },
+    { id: 'hb4', name: 'Cafe Latte', price: 140, category: 'hot_beverages', type: 'veg', desc: 'Milky coffee featuring rich espresso layered with steamed milk.' },
+    { id: 'hb5', name: 'Hot Chocolate', price: 150, category: 'hot_beverages', type: 'veg', special: true, desc: 'Velvety melted chocolate drink topped with fine cocoa powder dust.' },
+
+    // Cold Beverages
+    { id: 'cb1', name: 'Cold Coffee', price: 150, category: 'cold_beverages', type: 'veg', special: true, desc: 'Chilled blended milk, espresso, sugar, and cream vanilla scoop.' },
+    { id: 'cb2', name: 'Chocolate Shake', price: 150, category: 'cold_beverages', type: 'veg', desc: 'Rich chocolate ice cream milkshake topped with syrup shavings.' },
+    { id: 'cb3', name: 'Fresh Lime Soda', price: 90, category: 'cold_beverages', type: 'veg', desc: 'Sparkling soda water mixed with fresh lime juice, sugar, and salt.' },
+    { id: 'cb4', name: 'Mojito', price: 140, category: 'cold_beverages', type: 'veg', special: true, desc: 'Refreshing splash of fresh mint leaves, lime wedges, sugar & sparkling club soda.' },
+
     // Jain Foods
     { id: 'jn1', name: 'Jain Fried Rice', price: 185, category: 'jain_foods', type: 'jain', desc: 'Pure Jain rice cooked without onion or garlic with mild spices.' },
     { id: 'jn2', name: 'Jain Hakka Noodles', price: 185, category: 'jain_foods', type: 'jain', desc: 'Jain style wok-tossed noodles with cabbage, capsicum & soy sauce.' },

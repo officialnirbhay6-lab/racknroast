@@ -747,11 +747,101 @@ document.addEventListener('DOMContentLoaded', () => {
       revealObserver.observe(el);
     });
   } else {
-    // Fallback: if observer not supported, show immediately
-    revealElements.forEach(el => {
-      el.classList.add('reveal-active');
+  /* ==========================================
+     FULL 8-PAGE MENU CARD MODAL LIGHTBOX
+     ========================================== */
+  function initMenuCardModal() {
+    const modal = document.getElementById('menu-card-modal');
+    const openBtn = document.getElementById('open-menu-modal');
+    const closeBtn = document.getElementById('close-menu-modal');
+    const prevBtn = document.getElementById('prev-menu-page');
+    const nextBtn = document.getElementById('next-menu-page');
+    const modalImg = document.getElementById('menu-modal-img');
+    const pageIndicator = document.getElementById('menu-modal-page-indicator');
+    const modalThumbs = document.querySelectorAll('.modal-thumb');
+    const gridThumbs = document.querySelectorAll('.menu-card-thumb');
+
+    if (!modal || !modalImg) return;
+
+    let currentPage = 1;
+    const totalPages = 8;
+
+    function updateModalPage(page) {
+      currentPage = page;
+      modalImg.src = `./assets/images/menu_card_page_${currentPage}.jpg`;
+      if (pageIndicator) pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+
+      modalThumbs.forEach(thumb => {
+        const pageNum = parseInt(thumb.getAttribute('data-page'));
+        if (pageNum === currentPage) {
+          thumb.classList.add('active');
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    }
+
+    function openModal(page = 1) {
+      updateModalPage(page);
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (openBtn) openBtn.addEventListener('click', () => openModal(1));
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    gridThumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const page = parseInt(thumb.getAttribute('data-page')) || 1;
+        openModal(page);
+      });
+    });
+
+    modalThumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const page = parseInt(thumb.getAttribute('data-page')) || 1;
+        updateModalPage(page);
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const prevPage = currentPage > 1 ? currentPage - 1 : totalPages;
+        updateModalPage(prevPage);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const nextPage = currentPage < totalPages ? currentPage + 1 : 1;
+        updateModalPage(nextPage);
+      });
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') {
+        const prevPage = currentPage > 1 ? currentPage - 1 : totalPages;
+        updateModalPage(prevPage);
+      }
+      if (e.key === 'ArrowRight') {
+        const nextPage = currentPage < totalPages ? currentPage + 1 : 1;
+        updateModalPage(nextPage);
+      }
     });
   }
+
+  initMenuCardModal();
 
   /* Initialize page render */
   renderMenu();

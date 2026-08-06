@@ -414,13 +414,80 @@
         <p>Try searching for something else or browse categories.</p>
       </div>
 
-      <!-- Menu Card Download Link -->
+      <!-- Menu Card Download & Gallery Footer -->
       <div class="text-center menu-download-footer reveal-up">
-        <p>Prefer the classic print menu format?</p>
-        <a href="./assets/images/menu_card.jpg" target="_blank" class="btn btn-secondary">📄 View Full Menu Card Image</a>
+        <p>Prefer browsing our classic printed menu card?</p>
+        <button id="open-menu-modal" class="btn btn-secondary btn-lg" style="margin-bottom: 20px;">📖 Open Interactive 8-Page Menu Card</button>
+        
+        <!-- 8 Menu Card Thumbnails Grid -->
+        <div class="menu-card-thumbnails-grid">
+          <div class="menu-card-thumb" data-page="1">
+            <img src="./assets/images/menu_card_page_1.jpg" alt="Menu Card Page 1 - Main Course & Rice">
+            <span>Page 1: Main Course & Rice</span>
+          </div>
+          <div class="menu-card-thumb" data-page="2">
+            <img src="./assets/images/menu_card_page_2.jpg" alt="Menu Card Page 2 - Rolls & Momos">
+            <span>Page 2: Rolls & Momos</span>
+          </div>
+          <div class="menu-card-thumb" data-page="3">
+            <img src="./assets/images/menu_card_page_3.jpg" alt="Menu Card Page 3 - Burgers & Pizza">
+            <span>Page 3: Burgers & Pizza</span>
+          </div>
+          <div class="menu-card-thumb" data-page="4">
+            <img src="./assets/images/menu_card_page_4.jpg" alt="Menu Card Page 4 - Jain Foods">
+            <span>Page 4: Jain Special</span>
+          </div>
+          <div class="menu-card-thumb" data-page="5">
+            <img src="./assets/images/menu_card_page_5.jpg" alt="Menu Card Page 5 - Hot & Cold Beverages">
+            <span>Page 5: Beverages</span>
+          </div>
+          <div class="menu-card-thumb" data-page="6">
+            <img src="./assets/images/menu_card_page_6.jpg" alt="Menu Card Page 6">
+            <span>Page 6: Menu Specials</span>
+          </div>
+          <div class="menu-card-thumb" data-page="7">
+            <img src="./assets/images/menu_card_page_7.jpg" alt="Menu Card Page 7">
+            <span>Page 7: Menu Specials</span>
+          </div>
+          <div class="menu-card-thumb" data-page="8">
+            <img src="./assets/images/menu_card_page_8.jpg" alt="Menu Card Page 8">
+            <span>Page 8: Menu Specials</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- 8-Page Menu Card Gallery Modal Lightbox -->
+  <div id="menu-card-modal" class="modal-overlay">
+    <div class="menu-modal-container">
+      <button id="close-menu-modal" class="modal-close-btn" aria-label="Close Menu Gallery">❌</button>
+      
+      <div class="menu-modal-header">
+        <h3>📖 Rack N Roast - Full Official Menu Card</h3>
+        <span id="menu-modal-page-indicator">Page 1 of 8</span>
+      </div>
+
+      <div class="menu-modal-viewer">
+        <button id="prev-menu-page" class="modal-nav-btn prev" aria-label="Previous Page">❮</button>
+        <div class="menu-modal-img-wrapper">
+          <img id="menu-modal-img" src="./assets/images/menu_card_page_1.jpg" alt="Official Menu Card Page">
+        </div>
+        <button id="next-menu-page" class="modal-nav-btn next" aria-label="Next Page">❯</button>
+      </div>
+
+      <div class="menu-modal-thumbnails">
+        <img src="./assets/images/menu_card_page_1.jpg" class="modal-thumb active" data-page="1" alt="Thumb 1">
+        <img src="./assets/images/menu_card_page_2.jpg" class="modal-thumb" data-page="2" alt="Thumb 2">
+        <img src="./assets/images/menu_card_page_3.jpg" class="modal-thumb" data-page="3" alt="Thumb 3">
+        <img src="./assets/images/menu_card_page_4.jpg" class="modal-thumb" data-page="4" alt="Thumb 4">
+        <img src="./assets/images/menu_card_page_5.jpg" class="modal-thumb" data-page="5" alt="Thumb 5">
+        <img src="./assets/images/menu_card_page_6.jpg" class="modal-thumb" data-page="6" alt="Thumb 6">
+        <img src="./assets/images/menu_card_page_7.jpg" class="modal-thumb" data-page="7" alt="Thumb 7">
+        <img src="./assets/images/menu_card_page_8.jpg" class="modal-thumb" data-page="8" alt="Thumb 8">
+      </div>
+    </div>
+  </div>
 
   <!-- Combos Section -->
   <section id="combos" class="combos-section section-padding bg-darker">

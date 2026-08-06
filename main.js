@@ -773,6 +773,11 @@ document.addEventListener('DOMContentLoaded', () => {
       revealObserver.observe(el);
     });
   } else {
+    revealElements.forEach(el => {
+      el.classList.add('reveal-active');
+    });
+  }
+
   /* ==========================================
      FULL 8-PAGE MENU CARD MODAL LIGHTBOX
      ========================================== */

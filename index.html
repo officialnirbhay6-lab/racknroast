@@ -381,24 +381,28 @@
           <button id="menu-clear-search" class="clear-search-btn" style="display:none;">❌</button>
         </div>
 
-        <!-- Horizontal scrollable filter tabs -->
-        <div class="tabs-container">
-          <div class="filter-tabs" id="menu-tabs">
-            <button class="tab-btn active" data-category="main_course">Main Course</button>
-            <button class="tab-btn" data-category="roti">Roti & Paratha</button>
-            <button class="tab-btn" data-category="rice">Rice & Biryani</button>
-            <button class="tab-btn" data-category="starters">Starters & Snacks</button>
-            <button class="tab-btn" data-category="burgers">Burgers</button>
-            <button class="tab-btn" data-category="pizzas">Pizzas</button>
-            <button class="tab-btn" data-category="pasta">Pasta</button>
-            <button class="tab-btn" data-category="momos">Momos</button>
-            <button class="tab-btn" data-category="rolls">Rolls & Kathi</button>
-            <button class="tab-btn" data-category="subway">Subway & Hot Dogs</button>
-            <button class="tab-btn" data-category="soup">Soups</button>
-            <button class="tab-btn" data-category="hot_beverages">Hot Beverages ☕</button>
-            <button class="tab-btn" data-category="cold_beverages">Cold Beverages 🍹</button>
-            <button class="tab-btn" data-category="jain_foods">Jain Special 🌱</button>
+        <!-- Horizontal scrollable filter tabs with PC arrow navigation -->
+        <div class="tabs-wrapper">
+          <button id="menu-tab-prev" class="tab-scroll-btn prev" aria-label="Scroll Tabs Left">❮</button>
+          <div class="tabs-container" id="tabs-scroll-container">
+            <div class="filter-tabs" id="menu-tabs">
+              <button class="tab-btn active" data-category="main_course">Main Course</button>
+              <button class="tab-btn" data-category="roti">Roti & Paratha</button>
+              <button class="tab-btn" data-category="rice">Rice & Biryani</button>
+              <button class="tab-btn" data-category="starters">Starters & Snacks</button>
+              <button class="tab-btn" data-category="burgers">Burgers</button>
+              <button class="tab-btn" data-category="pizzas">Pizzas</button>
+              <button class="tab-btn" data-category="pasta">Pasta</button>
+              <button class="tab-btn" data-category="momos">Momos</button>
+              <button class="tab-btn" data-category="rolls">Rolls & Kathi</button>
+              <button class="tab-btn" data-category="subway">Subway & Hot Dogs</button>
+              <button class="tab-btn" data-category="soup">Soups</button>
+              <button class="tab-btn" data-category="hot_beverages">Hot Beverages ☕</button>
+              <button class="tab-btn" data-category="cold_beverages">Cold Beverages 🍹</button>
+              <button class="tab-btn" data-category="jain_foods">Jain Special 🌱</button>
+            </div>
           </div>
+          <button id="menu-tab-next" class="tab-scroll-btn next" aria-label="Scroll Tabs Right">❯</button>
         </div>
       </div>
 

@@ -1025,22 +1025,61 @@ input, select, textarea, button {
   color: var(--color-primary);
 }
 
-.tabs-container {
+.tabs-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.tab-scroll-btn {
+  background: rgba(230, 126, 34, 0.15);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-scroll-btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+.tabs-container {
+  flex-grow: 1;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+  padding: 8px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
 }
 
 .tabs-container::-webkit-scrollbar {
-  display: none; /* Safari/Chrome */
+  height: 4px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
 }
 
 .filter-tabs {
   display: flex;
   gap: 12px;
-  padding: 4px 0;
+  padding: 4px 10px;
   width: max-content;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .tab-btn {

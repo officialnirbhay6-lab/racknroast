@@ -423,6 +423,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // PC Category Tabs Arrow Navigation & Mouse Wheel Scrolling
+  const tabPrevBtn = document.getElementById('menu-tab-prev');
+  const tabNextBtn = document.getElementById('menu-tab-next');
+  const tabsContainer = document.getElementById('tabs-scroll-container');
+
+  if (tabPrevBtn && tabsContainer) {
+    tabPrevBtn.addEventListener('click', () => {
+      tabsContainer.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+  }
+
+  if (tabNextBtn && tabsContainer) {
+    tabNextBtn.addEventListener('click', () => {
+      tabsContainer.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+  }
+
+  if (tabsContainer) {
+    tabsContainer.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        tabsContainer.scrollBy({ left: e.deltaY > 0 ? 180 : -180, behavior: 'smooth' });
+      }
+    }, { passive: false });
+  }
+
   // Search Input Handler
   if (menuSearch) {
     menuSearch.addEventListener('input', () => {

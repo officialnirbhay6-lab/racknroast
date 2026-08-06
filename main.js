@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger split-entrance animation
     setTimeout(() => {
       preloader.classList.add('preloader-active');
-    }, 150);
+    }, 100);
 
     // Exit function
     let exited = false;
@@ -26,16 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Remove from DOM after slide up completes
         setTimeout(() => {
-          preloader.remove();
+          if (preloader && preloader.parentNode) {
+            preloader.remove();
+          }
         }, 800);
-      }, 900); // Hold for 0.9 seconds of brand appreciation
+      }, 700);
     }
 
     // Exit on load
     window.addEventListener('load', exitPreloader);
 
-    // Failsafe exit after 2.4 seconds
-    setTimeout(exitPreloader, 2400);
+    // Failsafe exit after 1.8 seconds
+    setTimeout(exitPreloader, 1800);
   }
 
   /* ==========================================

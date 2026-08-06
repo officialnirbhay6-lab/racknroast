@@ -42,66 +42,111 @@ document.addEventListener('DOMContentLoaded', () => {
      1. MENU DATABASE
      ========================================== */
   const MENU_ITEMS = [
-    // Quick Bites
-    { id: 'q1', name: 'French Fries', price: 120, category: 'quick_bites', type: 'veg', desc: 'Golden, crispy potato fries lightly salted.' },
-    { id: 'q2', name: 'Peri Peri Fries', price: 140, category: 'quick_bites', type: 'veg', desc: 'Crispy fries tossed in spicy African Peri-Peri seasoning.' },
-    { id: 'q3', name: 'Cheese Fries', price: 180, category: 'quick_bites', type: 'veg', special: true, desc: 'Fries layered with rich melted cheese and cream sauce.' },
-    { id: 'q4', name: 'Garlic Bread', price: 150, category: 'quick_bites', type: 'veg', desc: 'Toasted baguette slices brushed with garlic butter and herbs.' },
-    { id: 'q5', name: 'Nachos with Cheese Dip', price: 220, category: 'quick_bites', type: 'veg', desc: 'Crispy corn tortilla chips served with warm creamy cheese dip.' },
-    { id: 'q6', name: 'Onion Rings', price: 160, category: 'quick_bites', type: 'veg', desc: 'Crumbed and deep-fried sweet onion rings served with dip.' },
+    // Main Course
+    { id: 'mc1', name: 'Paneer Butter Masala', price: 240, category: 'main_course', type: 'veg', special: true, desc: 'Rich, creamy tomato gravy cooked with cottage cheese cubes & butter.' },
+    { id: 'mc2', name: 'Paneer Do Pyaza', price: 260, category: 'main_course', type: 'veg', desc: 'Paneer cooked with double onions and aromatic ground spices.' },
+    { id: 'mc3', name: 'Mushroom Masala', price: 260, category: 'main_course', type: 'veg', desc: 'Fresh mushrooms simmered in rich spiced onion tomato gravy.' },
+    { id: 'mc4', name: 'Mushroom Do Pyaza', price: 260, category: 'main_course', type: 'veg', desc: 'Button mushrooms cooked with diced caramelized onions & Indian herbs.' },
+    { id: 'mc5', name: 'Matar Paneer', price: 200, category: 'main_course', type: 'veg', desc: 'Classic North Indian curry of tender green peas and soft paneer.' },
+    { id: 'mc6', name: 'Kashmiri Aloo Dum', price: 200, category: 'main_course', type: 'veg', desc: 'Baby potatoes slow cooked in rich spiced yoghurt & cashew gravy.' },
+    { id: 'mc7', name: 'Shahi Paneer', price: 260, category: 'main_course', type: 'veg', special: true, desc: 'Royal paneer curry prepared in rich cashew nut cream gravy.' },
 
-    // Burgers & Sandwiches
-    { id: 'b1', name: 'Veg Burger', price: 160, category: 'burgers_sandwiches', type: 'veg', desc: 'Juicy vegetable patty, fresh lettuce, tomato, and house mayo.' },
-    { id: 'b2', name: 'Cheese Burger', price: 190, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Veggie patty layered with double cheddar cheese and pickle relish.' },
-    { id: 'b3', name: 'Grilled Veg Sandwich', price: 170, category: 'burgers_sandwiches', type: 'veg', desc: 'Mint chutney, seasonal vegetables, and spices grilled in sandwich bread.' },
-    { id: 'b4', name: 'Club Sandwich', price: 240, category: 'burgers_sandwiches', type: 'veg', special: true, desc: 'Triple decker sandwich packed with vegetables, cheese slices, and coleslaw.' },
+    // Roti & Paratha
+    { id: 'r1', name: 'Tawa Roti', price: 14, category: 'roti', type: 'veg', desc: 'Freshly baked soft whole wheat flatbread on tawa.' },
+    { id: 'r2', name: 'Lachha Paratha', price: 25, category: 'roti', type: 'veg', special: true, desc: 'Multi-layered flaky whole wheat bread baked with butter.' },
+
+    // Rice & Biryani
+    { id: 'rc1', name: 'Zeera Rice', price: 80, category: 'rice', type: 'veg', desc: 'Aromatic basmati rice tempered with cumin seeds & pure ghee.' },
+    { id: 'rc2', name: 'Veg Biryani', price: 150, category: 'rice', type: 'veg', desc: 'Hyderabadi style spiced biryani rice cooked with garden vegetables.' },
+    { id: 'rc3', name: 'Paneer Biryani', price: 170, category: 'rice', type: 'veg', special: true, desc: 'Fragrant long-grain basmati biryani topped with spiced paneer tikka.' },
+    { id: 'rc4', name: 'Veg Pulao', price: 120, category: 'rice', type: 'veg', desc: 'Mildly seasoned rice cooked with fresh seasonal vegetables.' },
+    { id: 'rc5', name: 'Kashmiri Pulao', price: 150, category: 'rice', type: 'veg', desc: 'Sweet & savory basmati rice garnished with raisins and cashews.' },
+    { id: 'rc6', name: 'Veg Fried Rice', price: 130, category: 'rice', type: 'veg', desc: 'Wok-tossed rice with finely chopped veggies & Indo-Chinese seasonings.' },
+    { id: 'rc7', name: 'Paneer Fried Rice', price: 150, category: 'rice', type: 'veg', desc: 'Wok-tossed fried rice cooked with paneer cubes & green onions.' },
+    { id: 'rc8', name: 'Schezwan Fried Rice', price: 130, category: 'rice', type: 'veg', desc: 'Spicy wok-tossed rice infused with spicy homemade Schezwan sauce.' },
+
+    // Starters & Snacks
+    { id: 'st1', name: 'Cheese Corn Balls', price: 135, category: 'starters', type: 'veg', desc: 'Golden crispy balls stuffed with gooey melted cheese & sweet corn.' },
+    { id: 'st2', name: 'Hot Cheesy Vegetable Logs', price: 145, category: 'starters', type: 'veg', desc: 'Crispy breaded vegetable logs filled with spicy melted cheese.' },
+    { id: 'st3', name: 'Herbed Potato Wedges', price: 110, category: 'starters', type: 'veg', desc: 'Crispy fried potato wedges seasoned with herbs & sea salt.' },
+    { id: 'st4', name: 'Nachos with Cheese', price: 225, category: 'starters', type: 'veg', special: true, desc: 'Crispy corn tortilla chips served with warm creamy cheese dip.' },
+    { id: 'st5', name: 'Kung Pao Potatoes', price: 190, category: 'starters', type: 'veg', desc: 'Crispy potato cubes tossed in spicy & tangy Kung Pao sauce.' },
+    { id: 'st6', name: 'Barbeque Paneer Satay', price: 240, category: 'starters', type: 'veg', special: true, desc: 'Grilled paneer skewers coated in smoky barbecue glaze.' },
+    { id: 'st7', name: 'Indo Chinese Paneer Chilli', price: 220, category: 'starters', type: 'veg', desc: 'Fried paneer cubes tossed with bell peppers & garlic chili sauce.' },
+    { id: 'st8', name: 'Manchurian', price: 200, category: 'starters', type: 'veg', desc: 'Crispy vegetable dumplings tossed in savory garlic soy Manchurian sauce.' },
+    { id: 'st9', name: 'Chilli Babycorn', price: 185, category: 'starters', type: 'veg', desc: 'Crunchy babycorn pieces sautéed with green chillies & soy glaze.' },
+    { id: 'st10', name: 'Chilli Potato', price: 135, category: 'starters', type: 'veg', desc: 'Crispy potato strips tossed in sweet & spicy honey chili sauce.' },
+
+    // Burgers
+    { id: 'bg1', name: 'Veggie Burger', price: 165, category: 'burgers', type: 'veg', desc: 'Juicy vegetable patty with lettuce, tomato & mayo in sesame bun.' },
+    { id: 'bg2', name: 'Potato Cheese Blast Burger', price: 195, category: 'burgers', type: 'veg', special: true, desc: 'Crispy potato patty with cheese burst center & spicy sauce.' },
+    { id: 'bg3', name: 'Paneer Patty Burger', price: 200, category: 'burgers', type: 'veg', desc: 'Thick grilled paneer patty topped with fresh veggies & herb sauce.' },
+    { id: 'bg4', name: 'Double Patty Mega Burger', price: 300, category: 'burgers', type: 'veg', special: true, desc: 'Loaded double veggie patties layered with double cheese slices.' },
 
     // Pizzas
-    { id: 'p1', name: 'Margherita Pizza', price: 250, category: 'pizzas', type: 'veg', desc: 'Rich tomato sauce, fresh mozzarella, olive oil, and fresh basil.' },
-    { id: 'p2', name: 'Farm Fresh Pizza', price: 320, category: 'pizzas', type: 'veg', desc: 'Loaded with capsicum, onion, tomatoes, sweet corn, and mushrooms.' },
-    { id: 'p3', name: 'Paneer Tikka Pizza', price: 350, category: 'pizzas', type: 'veg', special: true, desc: 'Tandoori paneer tikka cubes, red onions, capsicum, and coriander.' },
-    { id: 'p4', name: 'Veg Supreme Pizza', price: 390, category: 'pizzas', type: 'veg', desc: 'Assorted premium vegetables, black olives, jalapenos, and extra cheese.' },
+    { id: 'pz1', name: 'Margherita Pizza', price: 185, category: 'pizzas', type: 'veg', desc: 'Classic pizza with fresh tomato sauce, mozzarella cheese & basil.' },
+    { id: 'pz2', name: 'Veggie Lover Pizza', price: 200, category: 'pizzas', type: 'veg', desc: 'Loaded with capsicum, onion, tomatoes, sweet corn & mozzarella.' },
+    { id: 'pz3', name: 'Corn Pizza', price: 200, category: 'pizzas', type: 'veg', desc: 'Golden sweet corn kernels baked over melted cheese base.' },
+    { id: 'pz4', name: 'Indo Masala Paneer Pizza', price: 225, category: 'pizzas', type: 'veg', special: true, desc: 'Tandoori paneer tikka, red onions, capsicum & Indian spices.' },
+    { id: 'pz5', name: 'Mamamia Italian Pizza', price: 195, category: 'pizzas', type: 'veg', desc: 'Authentic Italian herbs, black olives, tomatoes & mozzarella cheese.' },
+    { id: 'pz6', name: 'Hawaiian Pizza', price: 220, category: 'pizzas', type: 'veg', desc: 'Tangy pineapple chunks, spicy jalapenos & rich melted cheese.' },
 
     // Pasta
-    { id: 'pa1', name: 'White Sauce Pasta', price: 250, category: 'pasta', type: 'veg', desc: 'Penne pasta tossed in rich, buttery, cheesy Alfredo sauce.' },
-    { id: 'pa2', name: 'Red Sauce Pasta', price: 240, category: 'pasta', type: 'veg', desc: 'Penne pasta cooked in spicy tomato sauce, garlic, and red chili flakes.' },
+    { id: 'ps1', name: 'Arabbitta (Red Sauce)', price: 220, category: 'pasta', type: 'veg', desc: 'Penne pasta tossed in spicy garlic tomato sauce & oregano.' },
+    { id: 'ps2', name: 'Alfredo (White Sauce)', price: 245, category: 'pasta', type: 'veg', desc: 'Penne pasta cooked in rich, buttery Alfredo cream sauce.' },
+    { id: 'ps3', name: 'Tomato Cream (Pink Sauce)', price: 250, category: 'pasta', type: 'veg', special: true, desc: 'Delicious combination of tangy tomato sauce & creamy cheese sauce.' },
 
-    // Wraps & Rolls
-    { id: 'w1', name: 'Paneer Tikka Wrap', price: 220, category: 'wraps_rolls', type: 'veg', desc: 'Grilled paneer tikka wrapped with crisp onions and mint mayo.' },
-    { id: 'w2', name: 'Veg Wrap', price: 180, category: 'wraps_rolls', type: 'veg', desc: 'Crispy veggie fingers wrapped with salsa and fresh coleslaw.' },
+    // Momos (Steam & Fry)
+    { id: 'ms1', name: 'Vegi Momos (Steam)', price: 150, category: 'momos', type: 'veg', desc: 'Steamed dumplings filled with finely chopped fresh vegetables.' },
+    { id: 'ms2', name: 'Schezwan Momos (Steam)', price: 150, category: 'momos', type: 'veg', desc: 'Steamed momos tossed in spicy Schezwan chili garlic sauce.' },
+    { id: 'ms3', name: 'Cheese and Corn Momos (Steam)', price: 160, category: 'momos', type: 'veg', desc: 'Steamed momos loaded with sweet corn & melted cheese.' },
+    { id: 'ms4', name: 'Paneer Momos (Steam)', price: 160, category: 'momos', type: 'veg', desc: 'Steamed momos packed with seasoned paneer filling.' },
+    { id: 'mf1', name: 'Vegi Momos (Fry)', price: 160, category: 'momos', type: 'veg', desc: 'Crispy deep-fried veg momos served with fiery chili dip.' },
+    { id: 'mf2', name: 'Schezwan Momos (Fry)', price: 160, category: 'momos', type: 'veg', desc: 'Crispy fried momos coated in hot Schezwan glaze.' },
+    { id: 'mf3', name: 'Cheese and Corn Momos (Fry)', price: 180, category: 'momos', type: 'veg', desc: 'Deep-fried golden momos stuffed with corn & cheese.' },
+    { id: 'mf4', name: 'Paneer Momos (Fry)', price: 180, category: 'momos', type: 'veg', desc: 'Crunchy deep-fried momos filled with spiced cottage cheese.' },
 
-    // Main Snacks
-    { id: 's1', name: 'Paneer Chilli', price: 280, category: 'main_snacks', type: 'veg', special: true, desc: 'Paneer cubes tossed with bell peppers, green chilies, and dark soy sauce.' },
-    { id: 's2', name: 'Veg Manchurian', price: 240, category: 'main_snacks', type: 'veg', desc: 'Crispy fried veg balls in sweet, tangy, and slightly spicy gravy.' },
+    // Rolls & Kathi
+    { id: 'rl1', name: 'Veg Roll', price: 80, category: 'rolls', type: 'veg', desc: 'Crispy vegetable filling wrapped in soft flatbread with mint sauce.' },
+    { id: 'rl2', name: 'Paneer Roll', price: 100, category: 'rolls', type: 'veg', desc: 'Spiced cottage cheese filling wrapped in warm roti.' },
+    { id: 'rl3', name: 'Paneer Cheese Roll', price: 130, category: 'rolls', type: 'veg', special: true, desc: 'Melted cheese and paneer cubes rolled in fresh flatbread.' },
+    { id: 'rl4', name: 'Veg Kathi Roll', price: 185, category: 'rolls', type: 'veg', desc: 'Kolkata style spiced veg kathi roll with mint chutney & onions.' },
+    { id: 'rl5', name: 'Paneer Kathi Roll', price: 280, category: 'rolls', type: 'veg', special: true, desc: 'Richly marinated paneer kathi roll with onions & spices.' },
 
-    // Desserts
-    { id: 'd1', name: 'Brownie with Ice Cream', price: 220, category: 'desserts', type: 'veg', desc: 'Warm sizzling chocolate brownie topped with vanilla ice cream scoop.' },
-    { id: 'd2', name: 'Chocolate Lava Cake', price: 180, category: 'desserts', type: 'veg', special: true, desc: 'Molten liquid chocolate core inside a soft chocolate cake casing.' },
-    { id: 'd3', name: 'Cheesecake', price: 250, category: 'desserts', type: 'veg', special: true, desc: 'Rich, smooth cream cheese cake base with sweet berry compote drizzle.' },
+    // Subway, Hot Dogs & Salads
+    { id: 'sb1', name: 'Aloo Subway', price: 150, category: 'subway', type: 'veg', desc: 'Spiced potato patty sub loaded with fresh veggies & sauces.' },
+    { id: 'sb2', name: 'Vegi Subway', price: 150, category: 'subway', type: 'veg', desc: 'Fresh crunchy vegetables & cheese dressings in subway bread.' },
+    { id: 'sb3', name: 'Paneer Subway', price: 190, category: 'subway', type: 'veg', desc: 'Grilled paneer cubes layered with cheese & subway dressings.' },
+    { id: 'hd1', name: 'Saucy Veg Hot Dog', price: 110, category: 'subway', type: 'veg', desc: 'Soft hotdog bun filled with saucy veggie sausage & mustard.' },
+    { id: 'hd2', name: 'Paneer Hot Dog', price: 135, category: 'subway', type: 'veg', desc: 'Paneer hotdog stuffed with melted cheese & chili mayo.' },
+    { id: 'hd3', name: 'Mushroom Hot Dog', price: 135, category: 'subway', type: 'veg', desc: 'Grilled mushroom hotdog bun with caramelized onions.' },
+    { id: 'sl1', name: 'Watermelon Feta Salad', price: 145, category: 'subway', type: 'veg', desc: 'Juicy watermelon cubes, fresh mint & crumbled feta cheese.' },
+    { id: 'sl2', name: 'Classic Greek Salad', price: 160, category: 'subway', type: 'veg', desc: 'Cucumbers, tomatoes, olives, bell peppers & olive oil dressing.' },
+    { id: 'sl3', name: 'Mediterranean Harvest Salad', price: 160, category: 'subway', type: 'veg', desc: 'Roasted veggies, chickpea, mixed greens & zesty lemon dressing.' },
 
-    // Hot Beverages
-    { id: 'h1', name: 'Espresso', price: 80, category: 'hot_beverages', type: 'veg', desc: 'Strong, rich, and aromatic shot of pure dark roast coffee.' },
-    { id: 'h2', name: 'Americano', price: 100, category: 'hot_beverages', type: 'veg', desc: 'Espresso shots topped up with hot water for full coffee aroma.' },
-    { id: 'h3', name: 'Cappuccino', price: 120, category: 'hot_beverages', type: 'veg', desc: 'Espresso balanced with steamed milk and thick layer of silky foam.' },
-    { id: 'h4', name: 'Café Latte', price: 130, category: 'hot_beverages', type: 'veg', desc: 'Milky coffee featuring rich espresso layered with steamed milk.' },
-    { id: 'h5', name: 'Mocha', price: 150, category: 'hot_beverages', type: 'veg', desc: 'Espresso combined with dark chocolate sauce, steamed milk, and foam.' },
-    { id: 'h6', name: 'Hot Chocolate', price: 150, category: 'hot_beverages', type: 'veg', special: true, desc: 'Velvety melted chocolate drink topped with fine cocoa powder dust.' },
-    { id: 'h7', name: 'Masala Tea', price: 60, category: 'hot_beverages', type: 'veg', desc: 'Traditional Indian tea infused with crushed ginger, cardamom, and herbs.' },
-    { id: 'h8', name: 'Green Tea', price: 70, category: 'hot_beverages', type: 'veg', desc: 'Healthy antioxidant green tea leaves brewed to perfection.' },
+    // Soups
+    { id: 'sp1', name: 'Cream of Tomato', price: 140, category: 'soup', type: 'veg', desc: 'Rich, smooth ripe tomato soup served with crispy croutons.' },
+    { id: 'sp2', name: 'Manchow Soup', price: 145, category: 'soup', type: 'veg', desc: 'Spicy Indo-Chinese veg soup topped with crispy fried noodles.' },
+    { id: 'sp3', name: 'Sweet Corn Soup', price: 125, category: 'soup', type: 'veg', desc: 'Comforting soup with sweet corn kernels & garden vegetables.' },
 
-    // Cold Beverages
-    { id: 'c1', name: 'Cold Coffee', price: 140, category: 'cold_beverages', type: 'veg', desc: 'Chilled blended milk, espresso, sugar, and cream vanilla scoop.' },
-    { id: 'c2', name: 'Iced Latte', price: 150, category: 'cold_beverages', type: 'veg', desc: 'Iced espresso poured over chilled milk with caramel flavor.' },
-    { id: 'c3', name: 'Chocolate Shake', price: 180, category: 'cold_beverages', type: 'veg', desc: 'Rich chocolate ice cream milkshake topped with syrup shavings.' },
-    { id: 'c4', name: 'Oreo Shake', price: 190, category: 'cold_beverages', type: 'veg', desc: 'Vanilla shake blended with crushed Oreo cookies and whipped cream.' },
-    { id: 'c5', name: 'Vanilla Shake', price: 170, category: 'cold_beverages', type: 'veg', desc: 'Classic thick shake blended with pure Madagascar vanilla extract.' },
-    { id: 'c6', name: 'Fresh Lime Soda', price: 90, category: 'cold_beverages', type: 'veg', desc: 'Sparkling soda water mixed with fresh lime juice, sugar, and salt.' },
-    { id: 'c7', name: 'Mojito (Virgin)', price: 140, category: 'cold_beverages', type: 'veg', special: true, desc: 'Refreshing splash of fresh mint leaves, lime wedges, sugar, and sparkling club soda.' }
+    // Jain Foods
+    { id: 'jn1', name: 'Jain Fried Rice', price: 185, category: 'jain_foods', type: 'jain', desc: 'Pure Jain rice cooked without onion or garlic with mild spices.' },
+    { id: 'jn2', name: 'Jain Hakka Noodles', price: 185, category: 'jain_foods', type: 'jain', desc: 'Jain style wok-tossed noodles with cabbage, capsicum & soy sauce.' },
+    { id: 'jn3', name: 'Jain Cheese Corn Balls', price: 145, category: 'jain_foods', type: 'jain', desc: 'Crispy corn and cheese balls prepared according to Jain norms.' },
+    { id: 'jn4', name: 'Jain Alfredo Pasta', price: 255, category: 'jain_foods', type: 'jain', desc: 'Creamy white sauce pasta prepared without onion or garlic.' },
+    { id: 'jn5', name: 'Jain Veggie Lover Pizza', price: 210, category: 'jain_foods', type: 'jain', desc: 'Jain pizza topped with capsicum, sweet corn & mozzarella.' },
+    { id: 'jn6', name: 'Jain Margherita Pizza', price: 195, category: 'jain_foods', type: 'jain', desc: 'Classic Jain tomato sauce and fresh mozzarella pizza.' },
+    { id: 'jn7', name: 'Jain Indo Masala Paneer Pizza', price: 235, category: 'jain_foods', type: 'jain', desc: 'Jain marinated paneer cubes on crispy pizza crust.' },
+    { id: 'jn8', name: 'Jain Vegetable Cheese Sandwich', price: 155, category: 'jain_foods', type: 'jain', desc: 'Grilled sandwich with Jain vegetable filling & melted cheese.' },
+    { id: 'jn9', name: 'Jain Heavenly Nutella Toast', price: 155, category: 'jain_foods', type: 'jain', desc: 'Toasted bread topped with rich Nutella cocoa hazelnut spread.' },
+    { id: 'jn10', name: 'Jain Manchow Soup', price: 160, category: 'jain_foods', type: 'jain', desc: 'Flavorful Jain style soup topped with crunchy fried noodles.' },
+    { id: 'jn11', name: 'Jain Saucy Veg Hot Dog', type: 'jain', price: 130, category: 'jain_foods', desc: 'Jain veggie hotdog bun served with mild tomato dip.' },
+    { id: 'jn12', name: 'Jain Paneer Hot Dog', price: 155, category: 'jain_foods', type: 'jain', desc: 'Soft hotdog bun filled with fresh Jain paneer & cheese.' }
   ];
 
   /* State Variables */
   let cart = {}; // Tracks item quantities by id: { q3: 1, b4: 2 }
-  let currentCategory = 'quick_bites';
+  let currentCategory = 'main_course';
   let searchQuery = '';
 
   /* ==========================================
